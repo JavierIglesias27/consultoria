@@ -1,5 +1,7 @@
 <?php
 //INTRODUCIR DATOS DE SQLMY ADMIN
+//https://www.freemysqlhosting.net/register/?action=register
+
 //new mysqli("SERVER", "USERNAME", "PASSWORD", "NAME");
 
 //new mysqli("sql4.freemysqlhosting.net", "sql4499631", "aVDL9RBswz", "sql4499631");
