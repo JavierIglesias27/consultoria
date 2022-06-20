@@ -65,7 +65,7 @@ Se mantendrán las  librerias actualizadas.
 
 ![wireframe ](./img/registroHtml.png)
 
-![wireframe ](.g/img/mailLoginHtml.png)
+![wireframe ](./img/mailLoginHtml.png)
 
 ## Path
 
