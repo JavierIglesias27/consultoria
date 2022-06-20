@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+
+		<link rel="stylesheet" href="css/custom.css" type="text/css" />
+		<style>
+			
+
+</style>
+		</style>
+	</head>
+	<body>
+		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button
+						type="button"
+						class="navbar-toggle collapsed"
+						data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1"
+					>
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div id="notRegister" class="navbar-brand page-scroll">
+						<a href="/registerFinal/registrarse.html"
+							><button class="button-register">SignUp</button></a
+						>
+						<a href="/registerFinal/login.html"><button class="button-register">LogIn</button></a>
+					</div>
+					<div style="visibility: hidden" id="divUsuario" >
+						<a href="/index.html"
+							><button id="usuario" class="button-register">Nombre del Usuario</button></a
+						>
+						<button onclick="removeCokkies()" class="button-register">EliminarCokkie</button>
+					</div>	
+				</div>
+				<div>
+					<a class="navbar-brand page-scroll" href="#inicio"
+						>Consulting Asesores S.A</a
+					>
+				</div>
+				
+					
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a class="page-scroll" href="#inicio">Inicio</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#quienessomos"> Quienes somos?</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#servicios">servicios</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#gestion">Gestion</a>
+						</li>
+						<li>
+							<a class="page-scroll" href="#contact">Contactanos</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<script>
+			if (getCookie("nombre")) {
+				document.getElementById("notRegister").style.visibility = "hidden";
+				document.getElementById("divUsuario").style.visibility = "visible";
+				document.getElementById("usuario").innerHTML = getCookie("nombre");
+			}
+			function getCookie(cname) {
+				let name = cname.trim() + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(";");
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == " ") {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			function removeCokkies() {
+				removeCookie("nombre");
+				removeCookie("email");
+				removeCookie("token");
+			}
+
+			function removeCookie(cname) {
+				document.cookie =
+					cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+			}
+		</script>
+		<!--acordarme de poner path lo de la cookie en JS funcion crearcokkie-->
+	</body>
+</html>

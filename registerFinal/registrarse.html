@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+		<script defer src="./registrarse.js"></script>
+		<script src="https://www.google.com/recaptcha/api.js?render=6LepHlMgAAAAAPTY7N2X6M7AkmJL7v3Dv5S86Ywx"></script>
+
+		<style>
+			body{
+				background-color: rgb(122, 122, 241);
+			}
+			.form {
+				z-index: 1;
+				background: #FFFFFF;
+				max-width: 360px;
+				margin: 0 auto 100px;
+				padding: 45px;
+				text-align: center;
+				box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+			}
+			.inputs_form_register {
+				font-family: "Roboto", sans-serif;
+				outline: 0;
+				background: #f2f2f2;
+				width: 100%;
+				border: 0;
+				margin: 0 0 15px;
+				padding: 15px;
+				box-sizing: border-box;
+				font-size: 14px;
+			}
+			.label_form_register {
+				font-family: "Roboto", sans-serif;
+				width: 100%;
+				margin: 0 0 15px;
+				padding: 15px;
+				font-size: 20px;
+			}
+
+			.inputError {
+				background-color: rgb(110, 5, 5);
+				border: 2px solid red;
+			}
+			.inputSucces {
+				background-color: rgb(78, 108, 3);
+				border: 2px solid green;
+			}
+			.button_form_register {
+				font-family: "Roboto", sans-serif;
+				text-transform: uppercase;
+				outline: 0;
+				background: #4c98af;
+				width: 100%;
+				border: 0;
+				padding: 15px;
+				color: #FFFFFF;
+				font-size: 20px;
+				-webkit-transition: all 0.3 ease;
+				transition: all 0.3 ease;
+				cursor: pointer;
+				}
+			.button_form_register:hover,.form button:active,.form button:focus {
+			background: #3340f0;
+			}
+			/**hace desaperece catcha x sino quiero verlo en pantalla/
+			/* .greecaptcha-badge {
+				visibility: hidden;
+			} */
+		</style>
+	</head>
+	<body>
+		<div class="form" id="SignUp">
+			<h2>Insertar Datos</h2>
+
+			<label class="label_form_register">Name</label>
+			<input  class="inputs_form_register"type="text" id="nameSignUp" placeholder="Nombre" value="MANOLO" />
+			<br />
+			<br />
+			<label class="label_form_register">Email</label>
+			<input
+				type="email"
+				id="emailSignUp"
+				placeholder="Email"
+				value="jiglesro7@gmail.com"
+				class="inputs_form_register"
+			/>
+			<br />
+			<br />
+			<label class="label_form_register">Contraseña</label>
+			<input
+				type="text"
+				id="passwordSignUp"
+				placeholder="password"
+				value="1234"
+				class="inputs_form_register"
+			/>
+			<br />
+			<br />
+			<label class="label_form_register">Telefono</label>
+			<input
+				type="text"
+				id="phoneSignUp"
+				placeholder="Phone"
+				value="123456789"
+				class="inputs_form_register"
+			/>
+			<br />
+			<br />
+			<input class="inputs_form_register" id="g-recaptcha-response" name="g-recaptcha-response" />
+			<br />
+			<br />
+			<button  class="button_form_register" id="buttonRegistro" disabled>Sign IN</button>
+		</div>
+	</body>
+</html>
