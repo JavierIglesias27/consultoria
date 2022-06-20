@@ -4,7 +4,7 @@
 
 //new mysqli("SERVER", "USERNAME", "PASSWORD", "NAME");
 
-//new mysqli("sql4.freemysqlhosting.net", "sql4499631", "aVDL9RBswz", "sql4499631");
+//new mysqli("sql4.freemysqlhosting.net", "sql4501016", "LNnLKKSRBe", "sql4501016");
 
 date_default_timezone_set('Europe/Madrid');
 define("RECAPTCHA_V3_SECRET_KEY", '6LepHlMgAAAAANAWwdPTbXISe5rKHLbQEno8tQV1');
@@ -44,7 +44,7 @@ function checkEmail($email, $myObject)
     /*if(pattern ) */
 
 
-    $conn = new mysqli("sql4.freemysqlhosting.net", "sql4499631", "aVDL9RBswz", "sql4499631");
+    $conn = new mysqli("sql4.freemysqlhosting.net", "sql4501016", "LNnLKKSRBe", "sql4501016");
 
     $sql = "SELECT email FROM usuarios WHERE email= '" . $email . "';";
     $result = $conn->query($sql);
@@ -86,7 +86,7 @@ function insertUser($email, $nombre, $phone, $password, $captcha, $myObject)
 }
 function guardarDB($email, $nombre, $phone, $password, $myObject)
 {
-    $conn = new mysqli("sql4.freemysqlhosting.net", "sql4499631", "aVDL9RBswz", "sql4499631");
+    $conn = new mysqli("sql4.freemysqlhosting.net", "sql4501016", "LNnLKKSRBe", "sql4501016");
     $sql = "INSERT INTO usuarios_temp(email,nombre,password,phone) VALUES('" . $email . "', '" . $nombre . "', '" . md5($password) . "','" . $phone . "' )";
     if ($conn->multi_query($sql) === TRUE) {
         // echo "  insert  table \"pbd\"<br/>";
@@ -102,7 +102,7 @@ function guardarDB($email, $nombre, $phone, $password, $myObject)
 function enviarmail($email, $myObject)
 {
     $usuario = new stdClass();
-    $conn = new mysqli("sql4.freemysqlhosting.net", "sql4499631", "aVDL9RBswz", "sql4499631");
+    $conn = new mysqli("sql4.freemysqlhosting.net", "sql4501016", "LNnLKKSRBe", "sql4501016");
     $sql = "SELECT * FROM usuarios_temp WHERE email = '" . $email . "' ORDER BY id DESC LIMIT 1 ;";
     $result = $conn->query($sql);
     if ($result->num_rows == 1) {
