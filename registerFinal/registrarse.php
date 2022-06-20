@@ -137,9 +137,9 @@ function sendMail($usuario, $sha1, $myObject)
     //MAIL
     $HostSMTP = 'smtp.gmail.com'; // Set the SMTP server to send through
     $ContrasenaDelCorreo = 'xdfphenmxmzauxpf'; // SMTP password
-    $SendFromEMAIL = 'jiglesro7@gmail.com'; // escribir mi correo electronico
+    $SendFromEMAIL = 'javiCesi75@gmail.com'; // escribir mi correo electronico
     $QuienLoEnviaNAME = 'moderator';
-    $SendFromEMAILreply = 'jiglesro7@gmail.com';
+    $SendFromEMAILreply = 'javiCesi75@gmail.com';
     $QuienResponderNAME = 'moderator';
     $PortSMTP = 465; // TCP port to connect to
     //$PortSMTP = 587; // TCP port to connect to
