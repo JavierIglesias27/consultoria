@@ -53,28 +53,27 @@ Se mantendrán las  librerias actualizadas.
 
 ![wireframe ](../parte1Consulting/img/diagramaGant.png)
 
-
 ## Wireframes
 
-![wireframe ](../parte1Consulting/img/indexHtml.png)
+![wireframe ](./img/indexHtml.png)
 
-![wireframe ](../parte1Consulting/img/menuHtml.png)
+![wireframe ](./img/menuHtml.png)
 
-![wireframe ](../parte1Consulting/img/loginHtml.png)
+![wireframe ](./img/loginHtml.png)
 
-![wireframe ](../parte1Consulting/img/contactaHtml.png)
+![wireframe ](./img/contactaHtml.png)
 
-![wireframe ](../parte1Consulting/img/registroHtml.png)
+![wireframe ](./img/registroHtml.png)
 
-![wireframe ](../parte1Consulting/img/mailLoginHtml.png)
+![wireframe ](.g/img/mailLoginHtml.png)
 
 ## Path
 
-![path ](../parte1Consulting/img/path.png)
+![path ](./img/path.png)
 
 ## Mockup
 
-![mockup ](../parte1Consulting/img/mockup.png)
+![mockup ](./img/mockup.png)
 
 ## Casos de uso
 
