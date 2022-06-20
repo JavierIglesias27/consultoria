@@ -136,7 +136,7 @@ function sendMail($usuario, $sha1, $myObject)
 {
     //MAIL
     $HostSMTP = 'smtp.gmail.com'; // Set the SMTP server to send through
-    $ContrasenaDelCorreo = 'xdfphenmxmzauxpf'; // SMTP password
+    $ContrasenaDelCorreo = 'glmhqdsxiibzpqak'; // SMTP password CONTRASEÑA APLICACIONGENERDA MAIL IMPORTANMTEEEEEE
     $SendFromEMAIL = 'javiCesi75@gmail.com'; // escribir mi correo electronico
     $QuienLoEnviaNAME = 'moderator';
     $SendFromEMAILreply = 'javiCesi75@gmail.com';
