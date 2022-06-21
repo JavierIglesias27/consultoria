@@ -1,4 +1,5 @@
 <?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/conf/admin.php";
 
 if (isset($_GET['id']) && isset($_GET['clave'])) {
     $id = $_GET['id'];
@@ -9,7 +10,7 @@ if (isset($_GET['id']) && isset($_GET['clave'])) {
     echo "clave=" . $clave;
 
     $usuario = new stdClass();
-    $conn = new mysqli("localhost", "root", "", "pbd");
+    $conn = new mysqli(data_base_hosting_consultoria, data_base_username_consultoria, data_base_password_consultoria, nameTabla_data_base_consultoria);
     $sql = "SELECT * FROM usuarios_temp WHERE id= '" . $id . "';";
     $result = $conn->query($sql);
     if ($result->num_rows == 1) {
@@ -36,7 +37,7 @@ if (isset($_GET['id']) && isset($_GET['clave'])) {
 
 function insertUser($user)
 {
-    $conn = new mysqli("localhost", "root", "", "pbd");
+    $conn = new mysqli(data_base_hosting_consultoria, data_base_username_consultoria, data_base_password_consultoria, nameTabla_data_base_consultoria);
     $sql = "INSERT INTO usuarios (email,nombre,phone,password,reg_date) VALUES ('" . $user->email . "','" . $user->nombre . "'," . $user->phone . ",'" . $user->password . "','" . date("Y-m-d H:i:s") . "');";
     if ($conn->query($sql) === TRUE) {
         echo "<br>OK";

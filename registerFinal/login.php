@@ -1,8 +1,8 @@
 <?php
 //areglar variabls pasandolas a otro php
 date_default_timezone_set('Europe/Madrid');
-define("RECAPTCHA_V3_SECRET_KEY", '6LepHlMgAAAAANAWwdPTbXISe5rKHLbQEno8tQV1');
 
+require_once $_SERVER["DOCUMENT_ROOT"] . "/conf/admin.php";
 $myObject = new stdClass();
 
 
@@ -50,7 +50,7 @@ function checkCaptcha($captcha, $myObject)
 function loginUser($email, $password, $myObject)
 {
     $usuario = new stdClass();
-    $conn = new mysqli("localhost", "root", "", "pbd");
+    $conn = new mysqli(data_base_hosting_consultoria, data_base_username_consultoria, data_base_password_consultoria, nameTabla_data_base_consultoria);
     $sql = "SELECT nombre FROM usuarios WHERE email= '" . $email . "'&& password='" . md5($password) . "';";
     $result = $conn->query($sql);
     if ($result->num_rows == 1) {

@@ -9,7 +9,9 @@
 //new mysqli("sql4.freemysqlhosting.net", "sql4501016", "LNnLKKSRBe", "sql4501016");
 
 date_default_timezone_set('Europe/Madrid');
-define("RECAPTCHA_V3_SECRET_KEY", '6LepHlMgAAAAANAWwdPTbXISe5rKHLbQEno8tQV1');
+
+require_once $_SERVER["DOCUMENT_ROOT"] . "/conf/admin.php";
+
 
 $myObject = new stdClass();
 
@@ -46,7 +48,7 @@ function checkEmail($email, $myObject)
     /*if(pattern ) */
 
 
-    $conn = new mysqli("localhost", "root", "", "pbd");
+    $conn = new mysqli(data_base_hosting_consultoria, data_base_username_consultoria, data_base_password_consultoria, nameTabla_data_base_consultoria);
 
     $sql = "SELECT email FROM usuarios WHERE email= '" . $email . "';";
     $result = $conn->query($sql);
@@ -88,7 +90,7 @@ function insertUser($email, $nombre, $phone, $password, $captcha, $myObject)
 }
 function guardarDB($email, $nombre, $phone, $password, $myObject)
 {
-    $conn = new mysqli("localhost", "root", "", "pbd");
+    $conn = new mysqli(data_base_hosting_consultoria, data_base_username_consultoria, data_base_password_consultoria, nameTabla_data_base_consultoria);
     $sql = "INSERT INTO usuarios_temp(email,nombre,password,phone) VALUES('" . $email . "', '" . $nombre . "', '" . md5($password) . "','" . $phone . "' )";
     if ($conn->multi_query($sql) === TRUE) {
         // echo "  insert  table \"pbd\"<br/>";
@@ -104,7 +106,7 @@ function guardarDB($email, $nombre, $phone, $password, $myObject)
 function enviarmail($email, $myObject)
 {
     $usuario = new stdClass();
-    $conn = new mysqli("localhost", "root", "", "pbd");
+    $conn = new mysqli(data_base_hosting_consultoria, data_base_username_consultoria, data_base_password_consultoria, nameTabla_data_base_consultoria);
     $sql = "SELECT * FROM usuarios_temp WHERE email = '" . $email . "' ORDER BY id DESC LIMIT 1 ;";
     $result = $conn->query($sql);
     if ($result->num_rows == 1) {
