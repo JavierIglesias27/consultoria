@@ -80,10 +80,7 @@ function registrarUsuario() {
 	) {
 		dniBoolean = false;
 	}
-	console.log(inputDni_valor == "");
-	console.log(!isNaN(inputDni_valor));
-	console.log(!funcionDni(inputDni_valor));
-	nameBoolean = false;
+	
 
 	// if (
 	// 	nameBoolean &&
