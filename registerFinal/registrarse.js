@@ -3,6 +3,7 @@ const boton = document.getElementById("buttonRegistro");
 boton.addEventListener("click", registrarUsuario);
 
 const inputName = document.getElementById("nameSignUp");
+const inputFirstName = document.getElementById("firstNameSignUp");
 const inputEmail = document.getElementById("emailSignUp");
 const inputPassword = document.getElementById("passwordSignUp");
 const inputPhone = document.getElementById("phoneSignUp");
@@ -37,11 +38,13 @@ function checkRecaptcha() {
 
 function registrarUsuario() {
 	let inputName_valor = inputName.value;
+	let inputFirstName_valor = inputFirstName.value;
 	let inputEmail_valor = inputEmail.value;
 	let inputPassword_valor = inputPassword.value;
 	let inputPhone_valor = inputPhone.value;
 
 	let nameBoolean = true;
+	let firstNameBoolean = true;
 	let emailBoolean = true;
 	let passwordBoolean = true;
 	let phoneBoolean = true;
@@ -52,6 +55,12 @@ function registrarUsuario() {
 	/* hacer regex xa todos en JS y luego poner el mismo eh PHP */
 	if (inputName_valor.length < 2) {
 		nameBoolean = false;
+	}
+	if (inputFirstName_valor == "" && !isNaN(inputFirstName_valor)) {
+		firstNameBoolean = false;
+	}
+	if (inputFirstName_valor.length < 2) {
+		firstNameBoolean = false;
 	}
 	if (inputEmail_valor == "" && !isNaN(inputEmail_valor)) {
 		emailBoolean = false;
@@ -77,6 +86,7 @@ function registrarUsuario() {
 			api: "checkEmail",
 			email: inputEmail_valor,
 			nombre: inputName_valor,
+			apellido: inputFirstName_valor,
 			phone: inputPhone_valor,
 			password: inputPassword_valor,
 			captcha: document.getElementById("g-recaptcha-response").value,
@@ -94,19 +104,32 @@ function registrarUsuario() {
 					console.warn("TODO OK");
 					emailBoolean = true;
 				}
-				coloresCampo(nameBoolean, emailBoolean, passwordBoolean, phoneBoolean);
+				coloresCampo(
+					nameBoolean,
+					firstNameBoolean,
+					emailBoolean,
+					passwordBoolean,
+					phoneBoolean
+				);
 			}
 		},
 		error: function (error) {
 			console.log("ERROR" + error);
 			emailBoolean = false;
-			coloresCampo(nameBoolean, emailBoolean, passwordBoolean, phoneBoolean);
+			coloresCampo(
+				nameBoolean,
+				firstNameBoolean,
+				emailBoolean,
+				passwordBoolean,
+				phoneBoolean
+			);
 		},
 	});
 }
 
 function coloresCampo(
 	nameBoolean,
+	firstNameBoolean,
 	emailBoolean,
 	passwordBoolean,
 	phoneBoolean
@@ -117,6 +140,13 @@ function coloresCampo(
 	} else {
 		inputName.classList.remove("inputSucces");
 		inputName.classList.add("inputError");
+	}
+	if (firstNameBoolean) {
+		inputFirstName.classList.remove("inputError");
+		inputFirstName.classList.add("inputSucces");
+	} else {
+		inputFirstName.classList.remove("inputSucces");
+		inputFirstName.classList.add("inputError");
 	}
 	if (emailBoolean) {
 		inputEmail.classList.remove("inputError");
