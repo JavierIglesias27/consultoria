@@ -75,12 +75,15 @@ function registrarUsuario() {
 		phoneBoolean = false;
 	}
 	if (
-		inputDni_valor == "" &&
-		!isNaN(inputDni_valor) &&
+		(inputDni_valor == "" && !isNaN(inputDni_valor)) ||
 		!funcionDni(inputDni_valor)
 	) {
 		dniBoolean = false;
 	}
+	console.log(inputDni_valor == "");
+	console.log(!isNaN(inputDni_valor));
+	console.log(!funcionDni(inputDni_valor));
+	nameBoolean = false;
 
 	// if (
 	// 	nameBoolean &&
