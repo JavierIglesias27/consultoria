@@ -21,10 +21,11 @@ if (isset($_GET['id']) && isset($_GET['clave'])) {
             $usuario->nombre = $row['nombre'];
             $usuario->apellido = $row['apellido'];
             $usuario->phone = $row['phone'];
+            $usuario->dni = $row['dni'];
             $usuario->password = $row['password'];
             $usuario->reg_date = $row['reg_date'];
         }
-        $xstring = $usuario->id . "-" . $usuario->email . "-" . $usuario->nombre . "-" . $usuario->apellido . "-" . $usuario->phone . "-" . $usuario->password . "-" . $usuario->reg_date;
+        $xstring = $usuario->id . "-" . $usuario->email . "-" . $usuario->nombre . "-" . $usuario->apellido . "-" . $usuario->phone . "-" . $usuario->dni . "-" . $usuario->password . "-" . $usuario->reg_date;
         $sha1 = sha1($xstring);
         if ($clave == $sha1) {
             insertUser($usuario);
@@ -39,7 +40,7 @@ if (isset($_GET['id']) && isset($_GET['clave'])) {
 function insertUser($user)
 {
     $conn = new mysqli(data_base_hosting_consultoria, data_base_username_consultoria, data_base_password_consultoria, nameTabla_data_base_consultoria);
-    $sql = "INSERT INTO usuarios (email,nombre, apellido,phone,password,reg_date) VALUES ('" . $user->email . "','" . $user->nombre . "','" . $user->apellido . "'," . $user->phone . ",'" . $user->password . "','" . date("Y-m-d H:i:s") . "');";
+    $sql = "INSERT INTO usuarios (email,nombre,apellido,phone,dni,password,reg_date) VALUES ('" . $user->email . "','" . $user->nombre . "','" . $user->apellido . "'," . $user->phone . ",'" . $user->dni . "','" . $user->password . "','" . date("Y-m-d H:i:s") . "');";
     if ($conn->query($sql) === TRUE) {
         echo "<br>OK";
         $sql_a = "DELETE FROM usuarios_temp WHERE email='" . $user->email . "' || reg_date <= NOW() - INTERVAL 1 DAY;";

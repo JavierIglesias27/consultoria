@@ -7,6 +7,7 @@ const inputFirstName = document.getElementById("firstNameSignUp");
 const inputEmail = document.getElementById("emailSignUp");
 const inputPassword = document.getElementById("passwordSignUp");
 const inputPhone = document.getElementById("phoneSignUp");
+const inputDni = document.getElementById("dniSignUp");
 
 /*importante darle tiempo de carga */
 // setTimeout(checkRecaptcha, 2000);
@@ -42,12 +43,14 @@ function registrarUsuario() {
 	let inputEmail_valor = inputEmail.value;
 	let inputPassword_valor = inputPassword.value;
 	let inputPhone_valor = inputPhone.value;
+	let inputDni_valor = inputDni.value;
 
 	let nameBoolean = true;
 	let firstNameBoolean = true;
 	let emailBoolean = true;
 	let passwordBoolean = true;
 	let phoneBoolean = true;
+	let dniBoolean = true;
 
 	if (inputName_valor == "" && !isNaN(inputName_valor)) {
 		nameBoolean = false;
@@ -71,6 +74,13 @@ function registrarUsuario() {
 	if (inputPhone_valor == "" && isNaN(inputPhone_valor)) {
 		phoneBoolean = false;
 	}
+	if (
+		inputDni_valor == "" &&
+		!isNaN(inputDni_valor) &&
+		!funcionDni(inputDni_valor)
+	) {
+		dniBoolean = false;
+	}
 
 	// if (
 	// 	nameBoolean &&
@@ -88,6 +98,7 @@ function registrarUsuario() {
 			nombre: inputName_valor,
 			apellido: inputFirstName_valor,
 			phone: inputPhone_valor,
+			dni: inputDni_valor,
 			password: inputPassword_valor,
 			captcha: document.getElementById("g-recaptcha-response").value,
 		},
@@ -109,7 +120,8 @@ function registrarUsuario() {
 					firstNameBoolean,
 					emailBoolean,
 					passwordBoolean,
-					phoneBoolean
+					phoneBoolean,
+					dniBoolean
 				);
 			}
 		},
@@ -121,7 +133,8 @@ function registrarUsuario() {
 				firstNameBoolean,
 				emailBoolean,
 				passwordBoolean,
-				phoneBoolean
+				phoneBoolean,
+				dniBoolean
 			);
 		},
 	});
@@ -132,7 +145,8 @@ function coloresCampo(
 	firstNameBoolean,
 	emailBoolean,
 	passwordBoolean,
-	phoneBoolean
+	phoneBoolean,
+	dniBoolean
 ) {
 	if (nameBoolean) {
 		inputName.classList.remove("inputError");
@@ -171,4 +185,35 @@ function coloresCampo(
 		inputPhone.classList.remove("inputSucces");
 		inputPhone.classList.add("inputError");
 	}
+	if (dniBoolean) {
+		inputDni.classList.remove("inputError");
+		inputDni.classList.add("inputSucces");
+	} else {
+		inputDni.classList.remove("inputSucces");
+		inputDni.classList.add("inputError");
+	}
+}
+function funcionDni($dni) {
+	let $numero;
+	let $letr;
+	let $letra;
+	let $expresion_regular_dni;
+
+	$expresion_regular_dni = /^\d{8}[a-zA-Z]$/;
+
+	if ($expresion_regular_dni.test($dni) == true) {
+		$numero = $dni.substr(0, $dni.length - 1);
+		$letr = $dni.substr($dni.length - 1, 1);
+		$numero = $numero % 23;
+		$letra = "TRWAGMYFPDXBNJZSQVHLCKET";
+		$letra = $letra.substring($numero, $numero + 1);
+
+		if ($letra != $letr.toUpperCase()) {
+			console.log("Dni erroneo");
+		} else {
+			console.log("Dni correcto");
+			return true;
+		}
+	}
+	return false;
 }

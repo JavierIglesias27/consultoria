@@ -26,7 +26,7 @@ switch ($_POST['api']) {
         $email = sanitize($_POST['email']);
         checkEmail($email, $myObject);
         if (isset($myObject->success)) {
-            insertUser($email, sanitize($_POST['nombre']), sanitize($_POST['apellido']), sanitize($_POST['phone']), sanitize($_POST['password']), sanitize($_POST['captcha']), $myObject);
+            insertUser($email, sanitize($_POST['nombre']), sanitize($_POST['apellido']), sanitize($_POST['phone']), sanitize($_POST['dni']), sanitize($_POST['password']), sanitize($_POST['captcha']), $myObject);
         }
         break;
     default:
@@ -62,7 +62,7 @@ function checkEmail($email, $myObject)
     }
     $conn->close();
 }
-function insertUser($email, $nombre, $apellido, $phone, $password, $captcha, $myObject)
+function insertUser($email, $nombre, $apellido, $phone, $dni, $password, $captcha, $myObject)
 {
     // hacer regex
     // if($email==""){
@@ -79,7 +79,7 @@ function insertUser($email, $nombre, $apellido, $phone, $password, $captcha, $my
         //Do something with error
     } else {
         if ($response->success == true && $response->score > 0.5) {
-            guardarDB($email, $nombre, $apellido,  $phone, $password, $myObject);
+            guardarDB($email, $nombre, $apellido,  $phone, $dni, $password, $myObject);
         } else if ($response->success == true && $response->score <= 0.5) {
             //Do something to denied access
             $myObject->error = "Human?<br>";
@@ -88,10 +88,10 @@ function insertUser($email, $nombre, $apellido, $phone, $password, $captcha, $my
         }
     }
 }
-function guardarDB($email, $nombre, $apellido, $phone, $password, $myObject)
+function guardarDB($email, $nombre, $apellido, $phone, $dni, $password, $myObject)
 {
     $conn = new mysqli(data_base_hosting_consultoria, data_base_username_consultoria, data_base_password_consultoria, nameTabla_data_base_consultoria);
-    $sql = "INSERT INTO usuarios_temp(email,nombre,apellido,password,phone) VALUES('" . $email . "', '" . $nombre . "','" . $apellido . "', '" . md5($password) . "','" . $phone . "' )";
+    $sql = "INSERT INTO usuarios_temp(email,nombre,apellido,password,phone,dni) VALUES('" . $email . "', '" . $nombre . "','" . $apellido . "', '" . md5($password) . "','" . $phone . "','" . $dni . "' )";
     if ($conn->multi_query($sql) === TRUE) {
         // echo "  insert  table \"pbd\"<br/>";
         $last_id = $conn->insert_id;
@@ -117,10 +117,11 @@ function enviarmail($email, $myObject)
             $usuario->nombre = $row['nombre'];
             $usuario->apellido = $row['apellido'];
             $usuario->phone = $row['phone'];
+            $usuario->dni = $row['dni'];
             $usuario->password = $row['password'];
             $usuario->reg_date = $row['reg_date'];
         }
-        $xstring = $usuario->id . "-" . $usuario->email . "-" . $usuario->nombre . "-" . $usuario->apellido . "-" . $usuario->phone . "-" . $usuario->password . "-" . $usuario->reg_date;
+        $xstring = $usuario->id . "-" . $usuario->email . "-" . $usuario->nombre . "-" . $usuario->apellido . "-" . $usuario->phone . "-" . $usuario->dni . "-" . $usuario->password . "-" . $usuario->reg_date;
         $sha1 = sha1($xstring);
         // echo $sha1;
         sendMail($usuario, $sha1, $myObject);
