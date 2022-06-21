@@ -3,7 +3,9 @@
 //https://www.freemysqlhosting.net/register/?action=register
 
 //new mysqli("SERVER", "USERNAME", "PASSWORD", "NAME");
+//new mysqli("localhost", "root", "", "pbd");
 
+//bbdd mysqlhosting
 //new mysqli("sql4.freemysqlhosting.net", "sql4501016", "LNnLKKSRBe", "sql4501016");
 
 date_default_timezone_set('Europe/Madrid');
@@ -44,7 +46,7 @@ function checkEmail($email, $myObject)
     /*if(pattern ) */
 
 
-    $conn = new mysqli("sql4.freemysqlhosting.net", "sql4501016", "LNnLKKSRBe", "sql4501016");
+    $conn = new mysqli("localhost", "root", "", "pbd");
 
     $sql = "SELECT email FROM usuarios WHERE email= '" . $email . "';";
     $result = $conn->query($sql);
@@ -86,7 +88,7 @@ function insertUser($email, $nombre, $phone, $password, $captcha, $myObject)
 }
 function guardarDB($email, $nombre, $phone, $password, $myObject)
 {
-    $conn = new mysqli("sql4.freemysqlhosting.net", "sql4501016", "LNnLKKSRBe", "sql4501016");
+    $conn = new mysqli("localhost", "root", "", "pbd");
     $sql = "INSERT INTO usuarios_temp(email,nombre,password,phone) VALUES('" . $email . "', '" . $nombre . "', '" . md5($password) . "','" . $phone . "' )";
     if ($conn->multi_query($sql) === TRUE) {
         // echo "  insert  table \"pbd\"<br/>";
@@ -102,7 +104,7 @@ function guardarDB($email, $nombre, $phone, $password, $myObject)
 function enviarmail($email, $myObject)
 {
     $usuario = new stdClass();
-    $conn = new mysqli("sql4.freemysqlhosting.net", "sql4501016", "LNnLKKSRBe", "sql4501016");
+    $conn = new mysqli("localhost", "root", "", "pbd");
     $sql = "SELECT * FROM usuarios_temp WHERE email = '" . $email . "' ORDER BY id DESC LIMIT 1 ;";
     $result = $conn->query($sql);
     if ($result->num_rows == 1) {
