@@ -9,30 +9,30 @@ const inputEmail = document.getElementById("emailContacta");
 const inputAsunto = document.getElementById("asuntoContact");
 const inputTextarea = document.getElementById("textAreaContacta");
 
-/*importante darle tiempo de carga *//*importante darle tiempo de carga */
+/*importante darle tiempo de carga */ /*importante darle tiempo de carga */
 // setTimeout(checkRecaptcha, 2000);
-// grecaptcha.ready(function () {
-// 	grecaptcha
-// 		.execute("6LepHlMgAAAAAPTY7N2X6M7AkmJL7v3Dv5S86Ywx", {
-// 			action: "validate_captcha",
-// 		})
-// 		.then(function (token) {
-// 			document.getElementById("g-recaptcha-response").value = token;
-// 			checkRecaptcha();
-// 		});
-// });
+grecaptcha.ready(function () {
+	grecaptcha
+		.execute("6LepHlMgAAAAAPTY7N2X6M7AkmJL7v3Dv5S86Ywx", {
+			action: "validate_captcha",
+		})
+		.then(function (token) {
+			document.getElementById("g-recaptcha-response").value = token;
+			checkRecaptcha();
+		});
+});
 
-// function checkRecaptcha() {
-// 	let inputCaptchat_valor = document.getElementById(
-// 		"g-recaptcha-response"
-// 	).value;
-// 	console.log(inputCaptchat_valor);
-// 	if (inputCaptchat_valor != "") {
-// 		boton.disabled = false;
-// 		return true;
-// 	}
-// 	return false;
-// }
+function checkRecaptcha() {
+	let inputCaptchat_valor = document.getElementById(
+		"g-recaptcha-response"
+	).value;
+	console.log(inputCaptchat_valor);
+	if (inputCaptchat_valor != "") {
+		boton.disabled = false;
+		return true;
+	}
+	return false;
+}
 
 function contactarUsuario() {
 	let inputName_valor = inputName.value;
@@ -41,7 +41,6 @@ function contactarUsuario() {
 	let inputEmail_valor = inputEmail.value;
 	let inputAsunto_valor = inputAsunto.value;
 	let inputTextarea_valor = inputTextarea.value;
-	
 
 	let nameBoolean = true;
 	let firstNameBoolean = true;
@@ -75,7 +74,7 @@ function contactarUsuario() {
 	if (inputTextarea_valor == "" && !isNaN(inputTextarea_valor)) {
 		textareaBoolean = false;
 	}
-	
+
 	$.ajax({
 		url: "./contacta/contacta.php",
 		type: "POST",
@@ -85,8 +84,8 @@ function contactarUsuario() {
 			nombre: inputName_valor,
 			apellido: inputFirstName_valor,
 			phone: inputPhone_valor,
-			asunto:inputAsunto_valor,
-			textarea:inputTextarea_valor,
+			asunto: inputAsunto_valor,
+			textarea: inputTextarea_valor,
 			captcha: document.getElementById("g-recaptcha-response").value,
 		},
 		dataType: "json", //esta quitado xq hola NO ES UN JSON es texto plano
@@ -107,8 +106,8 @@ function contactarUsuario() {
 					firstNameBoolean,
 					emailBoolean,
 					phoneBoolean,
-					asuntoBoolean ,
-				 	textareaBoolean 
+					asuntoBoolean,
+					textareaBoolean
 				);
 			}
 		},
@@ -120,8 +119,8 @@ function contactarUsuario() {
 				firstNameBoolean,
 				emailBoolean,
 				phoneBoolean,
-				asuntoBoolean ,
-				textareaBoolean 
+				asuntoBoolean,
+				textareaBoolean
 			);
 		},
 	});
@@ -132,8 +131,8 @@ function coloresCampo(
 	firstNameBoolean,
 	emailBoolean,
 	phoneBoolean,
-	asuntoBoolean ,
-	textareaBoolean 
+	asuntoBoolean,
+	textareaBoolean
 ) {
 	if (nameBoolean) {
 		inputName.classList.remove("inputError");
@@ -177,5 +176,4 @@ function coloresCampo(
 		inputTextarea.classList.remove("inputSucces");
 		inputTextarea.classList.add("inputError");
 	}
-
 }

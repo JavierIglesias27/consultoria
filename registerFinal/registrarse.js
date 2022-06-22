@@ -11,6 +11,7 @@ const inputDni = document.getElementById("dniSignUp");
 
 /*importante darle tiempo de carga */
 // setTimeout(checkRecaptcha, 2000);
+
 grecaptcha.ready(function () {
 	// do request for recaptcha token
 	// response is promise with passed token
@@ -80,7 +81,6 @@ function registrarUsuario() {
 	) {
 		dniBoolean = false;
 	}
-	
 
 	// if (
 	// 	nameBoolean &&

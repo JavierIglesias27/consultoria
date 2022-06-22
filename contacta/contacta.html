@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Formulario Contacta</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-		<script defer src="./contacta/contacta.js"></script>
-		<script src="https://www.google.com/recaptcha/api.js?render=6LepHlMgAAAAAPTY7N2X6M7AkmJL7v3Dv5S86Ywx"></script>
+		<script defer src="/contacta/contacta.js"></script>
+
 		<style>
 			.inputError {
 				background-color: rgb(110, 5, 5);
@@ -24,77 +19,79 @@
 			<div class="contact_form">
 				<div id="note"></div>
 				<div id="fields">
-					
-						<div class="form-group">
-							<input
-								type="text"
-								class="form-control"
-								id="nameContacta"
-								value="manuel"
-								placeholder="Nombre (requerido)"
-								required
-							/>
-						</div>
-						<div class="form-group">
-							<input
-								type="text"
-								class="form-control"
-								id="apellidoContacta"
-								value="trotero"
-								placeholder="Apellidos"
-							/>
-						</div>
-						<div class="form-group">
-							<input
-								type="text"
-								class="form-control"
-								id="phoneContacta"
-								value="123456789"
-								placeholder="Telefono"
-							/>
-						</div>
-						<div class="form-group">
-							<input
-								type="email"
-								class="form-control"
-								id="emailContacta"
-								value="javiCesi75@gmail.com"
-								placeholder="Email(requerido)"
-							/>
-						</div>
-						<div class="form-group">
-							<input
-								type="text"
-								class="form-control"
-								id="asuntoContact"
-								value="xxxxxxxxxxxx"
-								placeholder="Asunto"
-							/>
-						</div>
-						<div class="form-group">
-							<textarea
-								id="textAreaContacta"
-								class="form-control"
-								rows="3"
-								id="message"
-								placeholder="Mensaje"
-							></textarea>
-		
-						</div>
-						<div class="form-group">
-							<input
-								class="form-control"
-								id="g-recaptcha-response"
-								name="g-recaptcha-response"
-							/>
-						</div>
-						
-						<div class="clear"></div>
-						<input type="reset" class="btn btn-primary" value="Limpiar Form" />
-						<input  id="buttonContacta"type="submit" class="btn btn-primary" value="Enviar" />
-						
+					<div class="form-group">
+						<input
+							type="text"
+							class="form-control"
+							id="nameContacta"
+							value="manuel"
+							placeholder="Nombre (requerido)"
+							required
+						/>
+					</div>
+					<div class="form-group">
+						<input
+							type="text"
+							class="form-control"
+							id="apellidoContacta"
+							value="trotero"
+							placeholder="Apellidos"
+						/>
+					</div>
+					<div class="form-group">
+						<input
+							type="text"
+							class="form-control"
+							id="phoneContacta"
+							value="123456789"
+							placeholder="Telefono"
+						/>
+					</div>
+					<div class="form-group">
+						<input
+							type="email"
+							class="form-control"
+							id="emailContacta"
+							value="javiCesi75@gmail.com"
+							placeholder="Email(requerido)"
+						/>
+					</div>
+					<div class="form-group">
+						<input
+							type="text"
+							class="form-control"
+							id="asuntoContact"
+							value="xxxxxxxxxxxx"
+							placeholder="Asunto"
+						/>
+					</div>
+					<div class="form-group">
+						<textarea
+							id="textAreaContacta"
+							class="form-control"
+							rows="3"
+							id="message"
+							placeholder="Mensaje"
+						></textarea>
+					</div>
+					<div class="form-group">
+						<input
+							class="form-control"
+							id="g-recaptcha-response"
+							name="g-recaptcha-response"
+						/>
+					</div>
+
+					<div class="clear"></div>
+					<input type="reset" class="btn btn-primary" value="Limpiar Form" />
+					<input
+						id="buttonContacta"
+						type="submit"
+						class="btn btn-primary"
+						value="Enviar"
+					/>
 				</div>
 			</div>
-		</div> 
+		</div>
 	</body>
 </html>
