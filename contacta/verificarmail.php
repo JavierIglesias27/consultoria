@@ -41,17 +41,17 @@
 
             $xstring = $usuario->id . "-" . $usuario->email . "-" . $usuario->nombre . "-" . $usuario->apellido . "-" . $usuario->phone . "-" . $usuario->asunto . "-" . $usuario->textarea . "-" . $usuario->reg_date . '-0';
             $sha1 = sha1($xstring);
-            echo '<br/>';
-            echo 'AA+' . $usuario->email . '+AA';
-            echo '<br/>';
-            echo $sha1;
-            echo '<br/>';
+            // echo '<br/>';
+            // echo 'AA+' . $usuario->email . '+AA';
+            // echo '<br/>';
+            // echo $sha1;
+            // echo '<br/>';
 
             echo '<br/>';
             if ($clave == $sha1) {
-                echo '<h2> tu correo ha sido validado</h2>';
+                //  
                 // un avez hecho descomento insertuser
-                //insertUser($usuario);
+                insertUser($usuario);
             } else {
                 echo 'mal';
             }
@@ -62,13 +62,29 @@
     }
 
 
-    function insertUser($user)
+    function insertUser($usuario)
     {
         $conn = new mysqli(data_base_hosting_consultoria, data_base_username_consultoria, data_base_password_consultoria, nameTabla_data_base_consultoria);
-        $sql = 'UPDATE contacta_temp  SET estado=1 WHERE id="' . $user->id . '"';
+        $sql = 'UPDATE contacta_temp  SET estado=1 WHERE id="' . $usuario->id . '"';
         if ($conn->query($sql) === TRUE) {
             // copiar aqui tmb if
-            echo '<h2> tu correo ha sido validado</h2>';
+            echo '<div style="background-color: grey; border: 2px solid black">
+            <h1>Te damos la bienvenida a Consulting S.A</h1>
+            <p>
+                Sr/a' . "  " . '<i><b>' . $usuario->nombre . "  " .  $usuario->apellido . "  " . '</i></b>le confirmamos que su consulta a sido recibida
+                correctamente.<br /> Nuestros especialista darán una solución lo más
+                rápidamente posible poniendose en contacto con usted mediante su correo:' . "  " . '<i><b>' .
+                $usuario->email . '</i></b>  o su número de telefono:' . "  " . '<i><b>' . $usuario->phone . '
+            <i><b> </p>
+            <div style="background-color: white; width:50%;margin:auto; padding-left:5px; border: 2px solid black">
+            id=' . $usuario->id . '<br/> Asunto: ' . $usuario->asunto . '<br/> Fecha:' . $usuario->reg_date . '<br/>
+            Texto: ' . $usuario->textarea . '
+            
+            </div>
+            <p>En caso de que los datos sean erroneos pongasé en contacto mediante el correo: <a href="#">consultingAsesores@gmail.com</a></p>
+            <h3>Atentamente la dirección de Consuting S.A</h3>
+        </div>';
+
             // header('Location: login.html');
         } else {
             echo "<br>ERROR";
