@@ -88,10 +88,10 @@ function insertUser($email, $nombre, $apellido, $phone, $asunto, $textarea, $cap
         }
     }
 }
-function guardarDB($email, $nombre, $apellido, $phone, $asunto, $textarea, $myObject)
+function guardarDB($email, $nombre, $apellido, $phone, $asunto, $textarea,  $myObject)
 {
     $conn = new mysqli(data_base_hosting_consultoria, data_base_username_consultoria, data_base_password_consultoria, nameTabla_data_base_consultoria);
-    $sql = "INSERT INTO contacta_temp(email,nombre,apellido,phone,asunto,textarea) VALUES('" . $email . "', '" . $nombre . "','" . $apellido . "', '" . $phone . "','" . $asunto . "','" . $textarea . "' )";
+    $sql = "INSERT INTO contacta_temp(email,nombre,apellido,phone,asunto,textarea,estado) VALUES('" . $email . "', '" . $nombre . "','" . $apellido . "', '" . $phone . "','" . $asunto . "','" . $textarea . "',0 )";
     if ($conn->multi_query($sql) === TRUE) {
         // echo "  insert  table \"pbd\"<br/>";
         $last_id = $conn->insert_id;
@@ -119,9 +119,10 @@ function enviarmail($email, $myObject)
             $usuario->phone = $row['phone'];
             $usuario->asunto = $row['asunto'];
             $usuario->textarea = $row['textarea'];
+            $usuario->estado = $row['estado'];
             $usuario->reg_date = $row['reg_date'];
         }
-        $xstring = $usuario->id . "-" . $usuario->email . "-" . $usuario->nombre . "-" . $usuario->apellido . "-" . $usuario->phone . "-" . $usuario->asunto . "-" . $usuario->textarea . "-" . $usuario->reg_date;
+        $xstring = $usuario->id . "-" . $usuario->email . "-" . $usuario->nombre . "-" . $usuario->apellido . "-" . $usuario->phone . "-" . $usuario->asunto . "-" . $usuario->textarea . "-" . $usuario->reg_date .  "-" . $usuario->estado;
         $sha1 = sha1($xstring);
         // echo $sha1;
         sendMail($usuario, $sha1, $myObject);
@@ -155,7 +156,7 @@ function sendMail($usuario, $sha1, $myObject)
     $BodyHTML = '<div
     style="background-color: rgb(178, 198, 243); border: 1px solid black"
     ><h1>Bienvenido <code>	
-        &#128076;</code>   ' . $usuario->nombre . '</h1><p style="font-size:15px;"> Te has registrado correctamente<code>&#10004;</code></p><br/><div><p style="font-size:15px;">Click en el link para acceder:        <a href="http://' . $_SERVER['HTTP_HOST'] . '/contacta/nuevousuario.php?id=' . $usuario->id . '&clave=' . $sha1 . '"><b>' . $sha1 . '</b></a> </p></div></div>';
+        &#128076;</code>   ' . $usuario->nombre . '</h1><p style="font-size:15px;"> Valida tu correo :<code>&#10004;</code></p><br/><div><p style="font-size:15px;">Click en el link para acceder:        <a href="http://' . $_SERVER['HTTP_HOST'] . '/contacta/verificarmail.php?id=' . $usuario->id . '&clave=' . $sha1 . '"><b>' . $sha1 . '</b></a> </p></div></div>';
 
     $BodyNOHTML = "hola que tal?";
 
