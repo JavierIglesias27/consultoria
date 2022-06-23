@@ -153,10 +153,135 @@ function sendMail($usuario, $sha1, $myObject)
     //
     $SentToEmail = $usuario->email;/* este es el usuario q yo genere podria poner javi@hotmail.com */
     $Asunto = "ninguno";
-    $BodyHTML = '<div
-    style="background-color: rgb(178, 198, 243); border: 1px solid black"
-    ><h1>Bienvenido <code>	
-        &#128076;</code>   ' . $usuario->nombre . '</h1><p style="font-size:15px;"> Valida tu correo :<code>&#10004;</code></p><br/><div><p style="font-size:15px;">Click en el link para acceder:        <a href="http://' . $_SERVER['HTTP_HOST'] . '/contacta/verificarmail.php?id=' . $usuario->id . '&clave=' . $sha1 . '"><b>' . $sha1 . '</b></a> </p></div></div>';
+    // $BodyHTML = '<div
+    // style="background-color: rgb(178, 198, 243); border: 1px solid black"
+    // ><h1>Bienvenido <code>	
+    //     &#128076;</code>   ' . $usuario->nombre . '</h1><p style="font-size:15px;"> Valida tu correo :<code>&#10004;</code></p><br/><div><p style="font-size:15px;">Click en el link para acceder:        <a href="http://' . $_SERVER['HTTP_HOST'] . '/contacta/verificarmail.php?id=' . $usuario->id . '&clave=' . $sha1 . '"><b>' . $sha1 . '</b></a> </p></div></div>';
+
+    $css = file_get_contents('../css/emailContacta.css');
+    $BodyHTML = '
+    <html>
+        <head>
+        <style>
+          ' . $css . '
+           </style>
+        </head>
+        <body bgcolor="#FFFFFF">
+        <!-- HEADER -->
+        <table class="head-wrap" bgcolor="#999999">
+            <tr>
+                <td></td>
+                <td class="header container" >
+                        
+                        <div class="content">
+                        <table bgcolor="#999999">
+                            <tr>
+                                <td align="center"><h6 class="collapse">Bienvenido a Consulting S.A</h6></td>
+                            </tr>
+                        </table>
+                        </div>		
+                </td>
+                <td></td>
+            </tr>
+        </table>
+        <!-- /HEADER -->
+<!-- BODY -->
+<table class="body-wrap">
+<tr>
+    <td></td>
+    <td class="container" bgcolor="#FFFFFF">
+        <div class="content">
+        <table>
+            <tr>
+                <td>
+                
+                    <h3>Sr/a: <i><b>' . "  " . $usuario->nombre . " " . $usuario->apellido . '</b></i></h3>
+                    <p class="lead">Está a solo un paso de confirmar su consulta<br/></p>
+                    </h1><p style="font-size:15px;"> Valida tu correo :<code>&#10004;</code></p><br/><><p style="font-size:15px;">Click en el link para acceder:        <a href="http://' . $_SERVER['HTTP_HOST'] . '/contacta/verificarmail.php?id=' . $usuario->id . '&clave=' . $sha1 . '"><b>' . $sha1 . '</b></a> </p>
+                  
+                    <!-- Callout Panel -->
+                    <p class="callout" >
+                       Regresa a la página principal <a href="/index.html">Click aquí! &raquo;</a>
+                    </p><!-- /Callout Panel -->					
+                                            
+                    <!-- social & contact -->
+                    <table class="social" width="100%">
+                        <tr>
+                            <td>
+                                
+                                <!-- column 1 -->
+                                <table align="left" class="column">
+                                    <tr>
+                                        <td>				
+                                            
+                                            <h5 class="">Conecta con nosotros:</h5>
+                                            <p class=""><a href="https://www.facebook.com/" class="soc-btn fb">Facebook</a> <a href="https://twitter.com/" class="soc-btn tw">Twitter</a> <a href="https://www.google.es/" class="soc-btn gp">Google+</a></p>
+                    
+                                            
+                                        </td>
+                                    </tr>
+                                </table><!-- /column 1 -->	
+                                
+                                <!-- column 2 -->
+                                <table align="left" class="column">
+                                    <tr>
+                                        <td>				
+                                                                        
+                                            <h5 class="">Contacta sin compromiso:</h5>												
+                                            <p>Phone: <strong>+34-655874123</strong><br/>
+            Email: <strong><a href="emailto:consultingAsesores@gmail.com">consultingAsesores@gmail.com</a></strong></p>
+            
+                                        </td>
+                                    </tr>
+                                </table><!-- /column 2 -->
+                                
+                                <span class="clear"></span>	
+                                
+                            </td>
+                        </tr>
+                    </table><!-- /social & contact -->
+                    
+                </td>
+            </tr>
+        </table>
+        </div><!-- /content -->
+                                
+    </td>
+    <td></td>
+</tr>
+</table>
+<!-- /BODY -->
+
+    <!-- FOOTER -->
+    <table class="footer-wrap">
+        <tr>
+            <td></td>
+            <td class="container">
+                
+                    <!-- content -->
+                    <div class="content">
+                    <table>
+                    <tr>
+                        <td align="center">
+                            <p>
+                                <a href="#">Terms</a> |
+                                <a href="#">Privacy</a> |
+                                <a href="#"><unsubscribe>Unsubscribe</unsubscribe></a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                    </div><!-- /content -->
+                    
+            </td>
+            <td></td>
+        </tr>
+    </table><!-- /FOOTER -->
+
+    </body>
+</html>';
+
+
 
     $BodyNOHTML = "hola que tal?";
 
