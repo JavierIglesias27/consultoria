@@ -157,6 +157,7 @@ function sendMail($usuario, $sha1, $myObject)
     // ><h1>Bienvenido <code>	
     //     &#128076;</code>   ' . $usuario->nombre . '</h1><p style="font-size:15px;"> Te has registrado correctamente<code>&#10004;</code></p><br/><div><p style="font-size:15px;">Click en el link para acceder:        <a href="http://' . $_SERVER['HTTP_HOST'] . '/registerFinal/nuevo_usuario.php?id=' . $usuario->id . '&clave=' . $sha1 . '"><b>' . $sha1 . '</b></a> </p></div></div>';
     $css = file_get_contents('../css/emailContacta.css');
+
     $BodyHTML = '
     <html>
         <head>
@@ -200,7 +201,7 @@ function sendMail($usuario, $sha1, $myObject)
                   
                     <!-- Callout Panel -->
                     <p class="callout" >
-                       Regresa a la página principal <a href="/index.html">Click aquí! &raquo;</a>
+                       Regresa a la página principal <a href="https://index.html">Click aquí! &raquo;</a>
                     </p><!-- /Callout Panel -->					
                                             
                     <!-- social & contact -->
