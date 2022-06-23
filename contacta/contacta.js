@@ -177,3 +177,12 @@ function coloresCampo(
 		inputTextarea.classList.add("inputError");
 	}
 }
+document.getElementById("limpiar").addEventListener("click", LimpiarForm);
+function LimpiarForm() {
+	document.getElementById("nameContacta").value = "";
+	document.getElementById("apellidoContacta").value = "";
+	document.getElementById("phoneContacta").value = "";
+	document.getElementById("emailContacta").value = "";
+	document.getElementById("asuntoContact").value = "";
+	document.getElementById("textAreaContacta").value = "";
+}

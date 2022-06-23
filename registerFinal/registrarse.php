@@ -194,9 +194,9 @@ function sendMail($usuario, $sha1, $myObject)
                 <td>
                 
                     <h3>Sr/a: <i><b>' . "  " . $usuario->nombre . " " . $usuario->apellido . '<code>	
-                    //     &#128076;</code></b></i></h3>
-                    <p class="lead">Está a solo un paso de confirmar su consulta<br/></p>
-                    </h1><p style="font-size:15px;"> Valida tu correo :<code>&#10004;</code></p><br/><><p style="font-size:15px;">Click en el link para acceder:        <a href="http://' . $_SERVER['HTTP_HOST'] . '/registerFinal/nuevo_usuario.php?id=' . $usuario->id . '&clave=' . $sha1 . '"><b>' . $sha1 . '</b></a> </p>
+                     &#128076;</code></b></i></h3>
+                    <p class="lead">Está a solo un paso de confirmar su email<br/></p>
+                    </h1><p style="font-size:15px;"> Valida tu correo :<code>&#10004;</code></p><br/><p style="font-size:15px;">Click en el link para acceder:        <a href="http://' . $_SERVER['HTTP_HOST'] . '/registerFinal/nuevo_usuario.php?id=' . $usuario->id . '&clave=' . $sha1 . '"><b>' . $sha1 . '</b></a> </p>
                   
                     <!-- Callout Panel -->
                     <p class="callout" >
