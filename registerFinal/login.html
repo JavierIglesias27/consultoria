@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Login up</title>
+		<link rel="icon" href="/img/favicon.jpg">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 		<script defer src="./login.js"></script>
@@ -89,7 +90,7 @@
 			<input type="text" id="passwordSignUp" class="inputs_form_login" placeholder="password" />
 			<br />
 			<br />
-			<input id="g-recaptcha-response" name="g-recaptcha-response" class="inputs_form_login"/>
+			<input id="g-recaptcha-response" name="g-recaptcha-response" class="inputs_form_login" disabled="disabled"/>
 			<br />
 			<br />
 			<input type="checkbox" id="check1" name="check1" onclick="alert('Gracias por aceptar términos y condiciones')" value="yes" required>
@@ -97,6 +98,9 @@
 			<br/>
 			<br/>
 			<button id="buttonRegistro" disabled class="button_form_login">Sign UP</button>
+			<br/><br/>
+			<a onclick="alert('Contacta via mail para recuperar tu contraseña')">Lost your password?</a>
+				<a href="registrarse.html">Register</a>
 		</div>	
 	</body>
 </html>

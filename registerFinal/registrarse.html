@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="icon" href="/img/favicon.jpg">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 		<script defer src="./registrarse.js"></script>
@@ -142,6 +143,7 @@
 				class="inputs_form_register"
 				id="g-recaptcha-response"
 				name="g-recaptcha-response"
+				disabled="disabled"
 			/>
 			<br />
 			<br />
@@ -160,6 +162,10 @@
 			<button class="button_form_register" id="buttonRegistro" disabled>
 				Sign IN
 			</button>
+			<br/>
+			<br/>
+			<a onclick="alert('Contacta via mail para recuperar tu contraseña')">Lost your password?</a>
+			<a href="login.html">Log in</a>
 		</div>
 	</body>
 </html>
