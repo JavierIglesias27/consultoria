@@ -9,8 +9,6 @@ const inputEmail = document.getElementById("emailContacta");
 const inputAsunto = document.getElementById("asuntoContact");
 const inputTextarea = document.getElementById("textAreaContacta");
 
-/*importante darle tiempo de carga */ /*importante darle tiempo de carga */
-// setTimeout(checkRecaptcha, 2000);
 grecaptcha.ready(function () {
 	grecaptcha
 		.execute("6LepHlMgAAAAAPTY7N2X6M7AkmJL7v3Dv5S86Ywx", {
