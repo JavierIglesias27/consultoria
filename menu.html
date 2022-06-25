@@ -38,11 +38,13 @@
 						>
 						<a href="/registerFinal/login.html"><button class="button-register">Iniciar Sesion</button></a>
 					</div>
-					<div style="visibility: hidden" id="divUsuario" >
+					<div style="visibility: hidden; display:block" id="divUsuario" >
+						<p  style=" display:inline;">Bienvenido:</p>
+						<p id="usuario" style=" display:inline">NombreUsuario</p>
+						<!--elikman las cookies y sale del registro-->
 						<a href="/index.html"
-							><button id="usuario" class="button-register">Nombre del Usuario</button></a
+							><button onclick="removeCokkies()"  class="button-register">Cerrar Sesion</button></a
 						>
-						<button onclick="removeCokkies()" class="button-register">EliminarCokkie</button>
 					</div>	
 				</div>
 				<div>
@@ -50,9 +52,7 @@
 						>Consulting Asesores S.A</a
 					>
 				</div>
-				
-					
-
+			
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li >
