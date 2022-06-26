@@ -23,13 +23,13 @@ La intención es realizar una página web de una consultoría que ses fácil y a
 
 ## Descripción de las características
 
-`Será una página fácil e intuitiva donde el cliente pueda navegar`
+`Será una página web fácil e intuitiva donde el cliente pueda navegar`
 `El cliente podrá comunicarse con el consultor, que tendrá la responsabilidad de asesorar a su cliente para que alcance sus objetivos`
 `Los clientes podrán acceder a su espacio personal y gestionar su espacio personal `
 
 ## Mercado:
 
-`Todo tipo de clientes particulares(mayores de edad o menor tutedalo) o empresas que necesiten asesoría sobre temas legales `
+`Todo tipo de clientes particulares(mayores de edad o menor tutelados) o empresas que necesiten asesoría sobre temas legales `
 
 ## Lenguajes, codigos, bibliotecas y frameworks serán usados:
 
@@ -52,35 +52,33 @@ La intención es realizar una página web de una consultoría que ses fácil y a
  Se usará una  una base de datos MariaDB con código SQL y se contratará a myfreehosting.net  para poder tener acceso remoto.
 
 Se utilizará Heroku parar tener un servidor de php donde se actualizará el código mediante repositorio.
-+++
-
 ```
 
 ## Realizar un diagrama de Gantt
 
-![wireframe ](./diagramaGant.png)
+![wireframe ](./img/gantFinal.png)
 
 ## Wireframes
 
-![wireframe ](./indexHtml.png)
+![wireframe ](./img/indexHtml.png)
 
-![wireframe ](./menuHtml.png)
+![wireframe ](./img/menuHtml.png)
 
-![wireframe ](./loginHtml.png)
+![wireframe ](./img/loginHtml.png)
 
-![wireframe ](./contactaHtml.png)
+![wireframe ](./img/contactaHtml.png)
 
-![wireframe ](./mailContacta.png)
+![wireframe ](./img/mailContacta.png)
 
-![wireframe ](./mailRegistra.png)
+![wireframe ](./img/mailRegistra.png)
 
 ## Path
 
-![path ](./path.png)
+![path ](./img/path.png)
 
 ## Mockup
 
-![mockup ](./mockupdef.png)
+![mockup ](./img/mockupdef.png)
 
 ## Casos de uso
 
@@ -103,3 +101,14 @@ Se utilizará Heroku parar tener un servidor de php donde se actualizará el có
 3. Contacta con nosotros
 
    `En este apartado cualquier persona (cliente o no)podrá ponerse en contacto con la empresa y pedir información básica sobre temas legales introduciendo algunos datos personales básicos en un formulario de contacto`
+
+## Diferencias entre proyecto inicial y Final
+
+1. Ajuste de tiempo en HTML5 y CSS3, huboi que arreglar código y hubo que recortar de planteamiento inicial del proyecto.
+
+2.  Se ajustan los tiempos en el diagrama de Gant, debido a que la parte extra de Php y Base de Datos SQL requirienron mas tiempo de lo estimado
+
+3. Cambio en el formato final de los forms, se aclimatan unos forms que llaman más la atención y son más atraibles a la vista. Además se agregan enlaces para poder moverse entre registrarse, nuevo usuario e index.html.
+
+4. Los mail de cofirmación tanto de registrarse como de contacto, se cambia sus formato paras ser más fáciles y entendibles para el cliente y contengas más información extra.
+5. Los mails de registro y contacto se rellenan automaticamente al registrarte/ conatacto mediante los datos introducidos en el form y así el cliente puede guardar sus datos en caso de verificarlos.

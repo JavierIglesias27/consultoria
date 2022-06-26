@@ -2,7 +2,7 @@
 
 # Introducción:
 
-La intención es realizar una página web de una consultoría que ses fácil y accesible para todos clientes.Y poder aplicar mis conocimientos de Administración de Empresas a y programación para que tenga una buena funcionalidad desde frontEnd y parte del BackEnd.
+La intención es realizar una página web de una consultoría que sesa fácil y accesible para todos clientes.Y poder aplicar mis conocimientos de Administración de Empresas a y programación para que tenga una buena funcionalidad desde frontEnd y parte del BackEnd.
 
 ## BRAINSTORM
 
