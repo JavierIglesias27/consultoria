@@ -64,7 +64,9 @@ Se utilizará Heroku parar tener un servidor de php donde se actualizará el có
 
 ![wireframe ](./img/menuHtml.png)
 
-![wireframe ](./img/loginHtml.png)
+![wireframe ](./img/loginFinal.png)
+
+![wireframe ](./img/registrarseFinalHtml.png)
 
 ![wireframe ](./img/contactaHtml.png)
 
@@ -74,7 +76,7 @@ Se utilizará Heroku parar tener un servidor de php donde se actualizará el có
 
 ## Path
 
-![path ](./img/path.png)
+![path ](./img/pathFinal.png)
 
 ## Mockup
 
