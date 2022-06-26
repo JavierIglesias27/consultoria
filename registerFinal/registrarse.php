@@ -116,7 +116,8 @@ function sendMail($usuario, $sha1, $myObject)
     $QuienLoEnviaNAME = 'moderator';
     $SendFromEMAILreply = 'javiCesi75@gmail.com';
     $QuienResponderNAME = 'moderator';
-    $PortSMTP = 465; 
+    $PortSMTP = 465; // con consulting.localhost este
+   // $PortSMTP = 587; // freeemyhosting: este puerto
    
     $SentToEmail = $usuario->email;
     $Asunto = "ninguno";
@@ -267,6 +268,9 @@ function sendMail($usuario, $sha1, $myObject)
         $mail->Subject = $Asunto;
         $mail->Body    = $BodyHTML;
         $mail->AltBody = $BodyNOHTML;
+        //esto es lo nuevo xa el freemyhosting.net
+        $mail->SMTPSecure = 'tls';
+        
 
         $mail->send();
         $myObject->success = "Message has been sent";
