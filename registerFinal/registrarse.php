@@ -36,7 +36,6 @@ function checkEmail($email, $myObject)
     $sql = "SELECT email FROM usuarios WHERE email= '" . $email . "';";
     $result = $conn->query($sql);
     if ($result->num_rows == 1) {
-        // print_r($result);
         while ($row = $result->fetch_assoc()) {
             $myObject->error = "YA EXISTE: vacio - " . $row['email'];
         }
@@ -116,8 +115,8 @@ function sendMail($usuario, $sha1, $myObject)
     $QuienLoEnviaNAME = 'moderator';
     $SendFromEMAILreply = 'javiCesi75@gmail.com';
     $QuienResponderNAME = 'moderator';
-    //$PortSMTP = 465; // con consulting.localhost este
-   $PortSMTP = 587; // freeemyhosting: este puerto
+   //$PortSMTP = 465; // con consulting.localhost este en cao de q falle
+   $PortSMTP = 587; // freeemyhosting: este puerto y tmb xa consultoria.localhost
    
     $SentToEmail = $usuario->email;
     $Asunto = "ninguno";

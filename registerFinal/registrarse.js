@@ -207,6 +207,6 @@ function funcionDni($dni) {
 //assert
 
     //echo caso1(-1);
-    assert(funcionDni('43555458j') == '43555458j');
+    // assert(funcionDni('43555458j') == '43555458j');
 
 

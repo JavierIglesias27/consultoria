@@ -3,6 +3,7 @@
  define("RECAPTCHA_V3_SECRET_KEY", '6LepHlMgAAAAANAWwdPTbXISe5rKHLbQEno8tQV1');
 
  // las 4 primeras van  localhost/phpMYadmin
+ // cambiar puerto en registrase php  $PortSMTP = 465; // con consulting.localhost este
 
 define("data_base_hosting_consultoria", 'localhost');
 
@@ -14,6 +15,8 @@ define("nameTabla_data_base_consultoria", 'pbd');
 
 
 //estas van al freemysqlhosting.met q hay q renovar casa semana
+// jay q ir a registrarse php y cambiar el puerto a $PortSMTP = 587; // freeemyhosting: este puerto
+//linea 120 +o-
 
 // define("data_base_hosting_consultoria", 'sql4.freemysqlhosting.net');
 
