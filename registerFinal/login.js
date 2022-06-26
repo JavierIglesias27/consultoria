@@ -5,17 +5,13 @@ boton.addEventListener("click", registrarUsuario);
 const inputEmail = document.getElementById("emailSignUp");
 const inputPassword = document.getElementById("passwordSignUp");
 
-/*importante darle tiempo de carga */
-// setTimeout(checkRecaptcha, 2000);
 grecaptcha.ready(function () {
-	// do request for recaptcha token
-	// response is promise with passed token
+
 	grecaptcha
 		.execute("6LepHlMgAAAAAPTY7N2X6M7AkmJL7v3Dv5S86Ywx", {
 			action: "validate_captcha",
 		})
 		.then(function (token) {
-			// add token value to form
 			document.getElementById("g-recaptcha-response").value = token;
 			checkRecaptcha();
 		});
@@ -107,10 +103,6 @@ function crearCookie(user) {
 	document.cookie = "email" + "=" + user.email + ";" + expires + ";path=/";
 	document.cookie = "nombre" + "=" + user.nombre + ";" + expires + ";path=/";
 	document.cookie = "token" + "=" + user.token + ";" + expires + ";path=/";
-	// console.log(getCookie("email"));
-	// console.log(getCookie("nombre"));
-	// console.log(getCookie("token"));
-
 	window.location.replace("../index.html");
 }
 

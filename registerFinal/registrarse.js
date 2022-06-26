@@ -9,18 +9,13 @@ const inputPassword = document.getElementById("passwordSignUp");
 const inputPhone = document.getElementById("phoneSignUp");
 const inputDni = document.getElementById("dniSignUp");
 
-/*importante darle tiempo de carga */
-// setTimeout(checkRecaptcha, 2000);
 
 grecaptcha.ready(function () {
-	// do request for recaptcha token
-	// response is promise with passed token
 	grecaptcha
 		.execute("6LepHlMgAAAAAPTY7N2X6M7AkmJL7v3Dv5S86Ywx", {
 			action: "validate_captcha",
 		})
 		.then(function (token) {
-			// add token value to form
 			document.getElementById("g-recaptcha-response").value = token;
 			checkRecaptcha();
 		});
@@ -56,7 +51,6 @@ function registrarUsuario() {
 	if (inputName_valor == "" && !isNaN(inputName_valor)) {
 		nameBoolean = false;
 	}
-	/* hacer regex xa todos en JS y luego poner el mismo eh PHP */
 	if (inputName_valor.length < 2) {
 		nameBoolean = false;
 	}
@@ -82,13 +76,6 @@ function registrarUsuario() {
 		dniBoolean = false;
 	}
 
-	// if (
-	// 	nameBoolean &&
-	// 	emailBoolean &&
-	// 	passwordBoolean &&
-	// 	phoneBoolean &&
-	// 	checkRecaptcha()
-	// ) {
 	$.ajax({
 		url: "./registrarse.php",
 		type: "POST",
@@ -102,7 +89,7 @@ function registrarUsuario() {
 			password: inputPassword_valor,
 			captcha: document.getElementById("g-recaptcha-response").value,
 		},
-		dataType: "json", //esta quitado xq hola NO ES UN JSON es texto plano
+		dataType: "json", 
 		success: function (response) {
 			if (response == 0) {
 				console.warn(response);

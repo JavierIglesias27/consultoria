@@ -48,7 +48,6 @@ function insertUser($user)
         header('Location: login.html');
     } else {
         echo "<br>ERROR";
-        //echo "Error: insert table \"usuarios\" " . $conn->error . " <br>" . $sql . "<br>";
     }
     $conn->close();
 }

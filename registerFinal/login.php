@@ -1,12 +1,9 @@
 <?php
-//areglar variabls pasandolas a otro php
 date_default_timezone_set('Europe/Madrid');
 
 require_once $_SERVER["DOCUMENT_ROOT"] . "/conf/admin.php";
 $myObject = new stdClass();
 
-
-/* sanitize =le ponemos strip_tags xa q solo coja texto aunque sea codigo */
 function sanitize($texto)
 {
     return htmlentities(strip_tags($texto), ENT_QUOTES, "UTF-8");
@@ -34,13 +31,11 @@ function checkCaptcha($captcha, $myObject)
     );
     $response = json_decode($response);
     if ($response->success === false) {
-        //Do something with error
         $myObject->error = "NO recaptcha<br>";
     } else {
         if ($response->success == true && $response->score > 0.5) {
             $myObject->success = "Human";
         } else if ($response->success == true && $response->score <= 0.5) {
-            //Do something to denied access
             $myObject->error = "Human?<br>";
         } else {
             $myObject->error = "NO<br>";
@@ -60,10 +55,8 @@ function loginUser($email, $password, $myObject)
             $usuario->nombre = $row['nombre'];
             $usuario->token = md5(time() . "-" . $usuario->email);
             $sql = "UPDATE usuarios SET token='" . $usuario->token . "' WHERE email= '" . $email . "';";
-            $result_a = $conn->query($sql);/* hacer if xa comprobar q entre */
-
+            $result_a = $conn->query($sql);
             $myObject->success = json_encode($usuario);
-            // $myObject->error = null;
             break;
         }
     } else {
