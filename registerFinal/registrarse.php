@@ -116,15 +116,14 @@ function sendMail($usuario, $sha1, $myObject)
     $QuienLoEnviaNAME = 'moderator';
     $SendFromEMAILreply = 'javiCesi75@gmail.com';
     $QuienResponderNAME = 'moderator';
-    $PortSMTP = 465; // con consulting.localhost este
-   // $PortSMTP = 587; // freeemyhosting: este puerto
+    //$PortSMTP = 465; // con consulting.localhost este
+   $PortSMTP = 587; // freeemyhosting: este puerto
    
     $SentToEmail = $usuario->email;
     $Asunto = "ninguno";
 
     $css = file_get_contents('../css/emailContacta.css');
-
-
+  
     $BodyHTML = '
     <html>
         <head>

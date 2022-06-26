@@ -25,3 +25,4 @@ Esta creada para ofrezcer servicios profesionales de gestión y asesoramiento le
 
 ## Puntos fuertes
 -  Es un proyecto que tiene una gran usabilidad, debido a la visualización y sencillez de la página web, hace que los clientes o futuros clientes puedan accder a sus espacios y consultas muy facilmente. Además los formularios viene con avisos de colores en rojo o verde según si los campos introducidos son correctos o erroneos.
+
