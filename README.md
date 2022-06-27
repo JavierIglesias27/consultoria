@@ -1,8 +1,4 @@
 
-## Puntos fuertes
-
-- Es un proyecto que tiene una gran usabilidad, debido a la visualización y sencillez de la página web, hace que los clientes o futuros clientes puedan accder a sus espacios y consultas muy facilmente. Además los formularios viene con avisos de colores en rojo o verde según si los campos introducidos son correctos o erroneos.
-
 ## Título del Proyecto#
 
 _**Asesoría Consulting S.A**_
@@ -27,6 +23,9 @@ _**Asesoría Consulting S.A**_
 Esta página web es fácil y accesible para todos clientes y con buena funcionalidad.
 Esta creada para ofrezcer servicios profesionales de gestión y asesoramiento legal en diferentes ámbitos como por ejemplo el área laboral, Fiscal, extranjería...
 
+### Puntos fuertes
+
+Es un proyecto que tiene una gran usabilidad, debido a la visualización y sencillez de la página web, hace que los clientes o futuros clientes puedan accder a sus espacios y consultas muy facilmente. Además los formularios viene con avisos de colores en rojo o verde según si los campos introducidos son correctos o erroneos.
 
 ### Estructura 🔧
 
@@ -58,11 +57,9 @@ Esta creada para ofrezcer servicios profesionales de gestión y asesoramiento le
 5. PHPMailer
 6. Heroku
 
-
 ## Autor ✒️
 
 * **Javier Iglesias** - *Proyecto Final* - [github](https://github.com/JavierIglesias27)
-
 
 ## Licencia 📄
 
