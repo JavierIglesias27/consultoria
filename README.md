@@ -17,7 +17,7 @@ _**Asesoría Consulting S.A**_
 
  https://www.websur.tk/
 
-### Pede encontrar mas info 📖
+### Puede encontrar mas info 📖
 
  https://github.com/JavierIglesias27/consultoria
 
