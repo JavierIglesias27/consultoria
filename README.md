@@ -1,5 +1,7 @@
 # Nombre del Proyecto: Asesoría Consulting S.A
 
+# demo: http://consultingsa.herokuapp.com/
+
 ## Descripción del proyecto:
 
 Esta página web es fácil y accesible para todos clientes y con buena funcionalidad.
@@ -24,5 +26,5 @@ Esta creada para ofrezcer servicios profesionales de gestión y asesoramiento le
 - Mysql y MariaDB
 
 ## Puntos fuertes
--  Es un proyecto que tiene una gran usabilidad, debido a la visualización y sencillez de la página web, hace que los clientes o futuros clientes puedan accder a sus espacios y consultas muy facilmente. Además los formularios viene con avisos de colores en rojo o verde según si los campos introducidos son correctos o erroneos.
 
+- Es un proyecto que tiene una gran usabilidad, debido a la visualización y sencillez de la página web, hace que los clientes o futuros clientes puedan accder a sus espacios y consultas muy facilmente. Además los formularios viene con avisos de colores en rojo o verde según si los campos introducidos son correctos o erroneos.
