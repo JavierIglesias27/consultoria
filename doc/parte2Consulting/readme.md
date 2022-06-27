@@ -33,7 +33,7 @@ La intención es realizar una página web de una consultoría que ses fácil y a
 
 ## Lenguajes, codigos, bibliotecas y frameworks serán usados:
 
-1. Lenguajes
+1. Lenguajes utilizados para programar
    1. Html5
    2. Css3
    3. JavaScript
@@ -44,6 +44,10 @@ La intención es realizar una página web de una consultoría que ses fácil y a
    3. Fonts
    4. Jquery
 3. MySQL- MariaDB
+4. Heroku (Servidor php)
+5. Composer (Mantener actualizadas las librerias)
+6. PHPMailer(Para hacer mailing)
+7. Recaptcha(verificación del registros de alta y login)
 
 ## Herramientas
 

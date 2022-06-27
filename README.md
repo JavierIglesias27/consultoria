@@ -11,6 +11,14 @@
 Esta página web es fácil y accesible para todos clientes y con buena funcionalidad.
 Esta creada para ofrezcer servicios profesionales de gestión y asesoramiento legal en diferentes ámbitos como por ejemplo el área laboral, Fiscal, extranjería...
 
+## Estructura Proyecto
+
+- `index.html` Pagina Principal del proyecto
+- `menu.html`Menu asociado a la página principal
+- `login.html`Página nueva para usuarios registrado.
+- `registrarse.html` Página para darse de alta como nuevo usuario.
+- `contacta.html` Formulario en la página principal para contacto.
+
 ## Lenguajes, codigos, bibliotecas.
 
 1. Lenguajes
@@ -23,11 +31,12 @@ Esta creada para ofrezcer servicios profesionales de gestión y asesoramiento le
    2. FontsAwesome
    3. Fonts
    4. Jquery
+   5. Ajax
+   6. composer
 3. MySQL- MariaDB
-
-## Base de datos
-
-- Mysql y MariaDB
+4. Recaptcha
+5. PHPMailer
+6. Heroku
 
 ## Puntos fuertes
 
