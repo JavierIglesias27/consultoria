@@ -33,7 +33,7 @@ La intención es realizar una página web de una consultoría que ses fácil y a
 
 ## Lenguajes, codigos, bibliotecas y frameworks serán usados:
 
-1. Lenguajes
+1. Lenguajes utilizados para programar
    1. Html5
    2. Css3
    3. JavaScript
@@ -44,6 +44,10 @@ La intención es realizar una página web de una consultoría que ses fácil y a
    3. Fonts
    4. Jquery
 3. MySQL- MariaDB
+4. Heroku (Servidor php)
+5. Composer (Mantener actualizadas las librerias)
+6. PHPMailer(Para hacer mailing)
+7. Recaptcha(verificación del registros de alta y login)
 
 ## Herramientas
 
@@ -56,23 +60,23 @@ Se utilizará Heroku parar tener un servidor de php donde se actualizará el có
 
 ## Realizar un diagrama de Gantt
 
-![wireframe ](./img/gantFinal.png)
+![diagrama de Gant ](./img/gantFinal.png)
 
 ## Wireframes
 
-![wireframe ](./img/indexHtml.png)
+![index.html ](./img/indexHtml.png)
 
-![wireframe ](./img/menuHtml.png)
+![menu.html ](./img/menuHtml.png)
 
-![wireframe ](./img/loginFinal.png)
+![formLogin.html ](./img/loginFinal.png)
 
-![wireframe ](./img/registrarseFinalHtml.png)
+![formRegistrarse.html ](./img/registrarseFinalHtml.png)
 
-![wireframe ](./img/contactaHtml.png)
+![formContacta ](./img/contactaHtml.png)
 
-![wireframe ](./img/mailContacta.png)
+![formMail ](./img/mailContacta.png)
 
-![wireframe ](./img/mailRegistra.png)
+![FormRegistro ](./img/mailRegistra.png)
 
 ## Path
 
@@ -108,9 +112,29 @@ Se utilizará Heroku parar tener un servidor de php donde se actualizará el có
 
 1. Ajuste de tiempo en HTML5 y CSS3, huboi que arreglar código y hubo que recortar de planteamiento inicial del proyecto.
 
-2.  Se ajustan los tiempos en el diagrama de Gant, debido a que la parte extra de Php y Base de Datos SQL requirienron mas tiempo de lo estimado
+2. Se ajustan los tiempos en el diagrama de Gant, debido a que la parte extra de Php y Base de Datos SQL requirienron mas tiempo de lo estimado
 
 3. Cambio en el formato final de los forms, se aclimatan unos forms que llaman más la atención y son más atraibles a la vista. Además se agregan enlaces para poder moverse entre registrarse, nuevo usuario e index.html.
 
 4. Los mail de cofirmación tanto de registrarse como de contacto, se cambia sus formato paras ser más fáciles y entendibles para el cliente y contengas más información extra.
 5. Los mails de registro y contacto se rellenan automaticamente al registrarte/ conatacto mediante los datos introducidos en el form y así el cliente puede guardar sus datos en caso de verificarlos.
+
+## Prueba Usabilidad
+
+`resultado obtenido mediante GTMETRIX`
+
+![page1 ](./img/page1.png)
+
+![page2 ](./img/page2.png)
+
+![page3 ](./img/page3.png)
+
+![page4 ](./img/page4.png)
+
+![page5 ](./img/page5.png)
+
+![page6 ](./img/page6.png)
+
+![page7 ](./img/page7.png)
+
+![page8 ](./img/page8.png)

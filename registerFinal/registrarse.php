@@ -46,7 +46,7 @@ function checkEmail($email, $myObject)
 }
 function insertUser($email, $nombre, $apellido, $phone, $dni, $password, $captcha, $myObject)
 {
-  
+
     $response = file_get_contents(
         "https://www.google.com/recaptcha/api/siteverify?secret=" . RECAPTCHA_V3_SECRET_KEY . "&response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR']
     );
@@ -109,20 +109,20 @@ use PHPMailer\PHPMailer\Exception;
 function sendMail($usuario, $sha1, $myObject)
 {
     //MAIL
-    $HostSMTP = 'smtp.gmail.com'; 
-    $ContrasenaDelCorreo = 'glmhqdsxiibzpqak'; 
-    $SendFromEMAIL = 'javiCesi75@gmail.com'; 
+    $HostSMTP = 'smtp.gmail.com';
+    $ContrasenaDelCorreo = 'glmhqdsxiibzpqak';
+    $SendFromEMAIL = 'javiCesi75@gmail.com';
     $QuienLoEnviaNAME = 'moderator';
     $SendFromEMAILreply = 'javiCesi75@gmail.com';
     $QuienResponderNAME = 'moderator';
-   //$PortSMTP = 465; // con consulting.localhost este en cao de q falle
-   $PortSMTP = 587; // freeemyhosting: este puerto y tmb xa consultoria.localhost
-   
+    //$PortSMTP = 465; // con consulting.localhost este en cao de q falle
+    $PortSMTP = 587; // freeemyhosting: este puerto y tmb xa consultoria.localhost
+
     $SentToEmail = $usuario->email;
     $Asunto = "ninguno";
 
     $css = file_get_contents('../css/emailContacta.css');
-  
+
     $BodyHTML = '
     <html>
         <head>
@@ -166,7 +166,7 @@ function sendMail($usuario, $sha1, $myObject)
                   
                     <!-- Callout Panel -->
                     <p class="callout" >
-                       Regresa a la página principal <a href="http://index.html">Click aquí! &raquo;</a>
+                       Regresa a la página principal <a href="' .  $_SERVER['HTTP_HOST'] . '/index.html">Click aquí! &raquo;</a>
                     </p><!-- /Callout Panel -->					
                                             
                     <!-- social & contact -->
@@ -253,22 +253,22 @@ function sendMail($usuario, $sha1, $myObject)
 
     try {
         $mail->SMTPDebug = SMTP::DEBUG_OFF;
-        $mail->isSMTP();                                            
-        $mail->Host       = $HostSMTP;                   
-        $mail->SMTPAuth   = true;                                   
-        $mail->Username   = $SendFromEMAIL;                  
-        $mail->Password   = $ContrasenaDelCorreo;                                
-        $mail->Port       = $PortSMTP;                                    
+        $mail->isSMTP();
+        $mail->Host       = $HostSMTP;
+        $mail->SMTPAuth   = true;
+        $mail->Username   = $SendFromEMAIL;
+        $mail->Password   = $ContrasenaDelCorreo;
+        $mail->Port       = $PortSMTP;
         $mail->setFrom($SendFromEMAIL, $QuienLoEnviaNAME);
-        $mail->addAddress($SentToEmail);        
+        $mail->addAddress($SentToEmail);
         $mail->addReplyTo($SendFromEMAIL, $QuienLoEnviaNAME);
-        $mail->isHTML(true);                             
+        $mail->isHTML(true);
         $mail->Subject = $Asunto;
         $mail->Body    = $BodyHTML;
         $mail->AltBody = $BodyNOHTML;
         //esto es lo nuevo xa el freemyhosting.net
         $mail->SMTPSecure = 'tls';
-        
+
 
         $mail->send();
         $myObject->success = "Message has been sent";

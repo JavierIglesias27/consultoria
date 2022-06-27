@@ -1,9 +1,9 @@
 <?php
 
- define("RECAPTCHA_V3_SECRET_KEY", '6LepHlMgAAAAANAWwdPTbXISe5rKHLbQEno8tQV1');
+define("RECAPTCHA_V3_SECRET_KEY", '6LepHlMgAAAAANAWwdPTbXISe5rKHLbQEno8tQV1');
 
- // las 4 primeras van  localhost/phpMYadmin
- // cambiar puerto en registrase php  $PortSMTP = 465; // con consulting.localhost este
+// las 4 primeras van  localhost/phpMYadmin
+// cambiar puerto en registrase php  $PortSMTP = 465; // con consulting.localhost este
 
 // define("data_base_hosting_consultoria", 'localhost');
 

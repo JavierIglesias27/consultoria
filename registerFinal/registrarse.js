@@ -9,7 +9,6 @@ const inputPassword = document.getElementById("passwordSignUp");
 const inputPhone = document.getElementById("phoneSignUp");
 const inputDni = document.getElementById("dniSignUp");
 
-
 grecaptcha.ready(function () {
 	grecaptcha
 		.execute("6LepHlMgAAAAAPTY7N2X6M7AkmJL7v3Dv5S86Ywx", {
@@ -89,7 +88,7 @@ function registrarUsuario() {
 			password: inputPassword_valor,
 			captcha: document.getElementById("g-recaptcha-response").value,
 		},
-		dataType: "json", 
+		dataType: "json",
 		success: function (response) {
 			if (response == 0) {
 				console.warn(response);
@@ -113,7 +112,8 @@ function registrarUsuario() {
 			}
 		},
 		error: function (error) {
-			console.log("ERROR" + error);
+			console.log("ERROR");
+			console.log(error);
 			emailBoolean = false;
 			coloresCampo(
 				nameBoolean,
@@ -204,9 +204,3 @@ function funcionDni($dni) {
 	}
 	return false;
 }
-//assert
-
-    //echo caso1(-1);
-    // assert(funcionDni('43555458j') == '43555458j');
-
-
