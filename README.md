@@ -2,6 +2,10 @@
 
 # demo: http://consultingsa.herokuapp.com/
 
+# github: https://github.com/JavierIglesias27/consultoria
+
+# visualizacion HTML-CSS-JS: https://www.websur.tk/
+
 ## Descripción del proyecto:
 
 Esta página web es fácil y accesible para todos clientes y con buena funcionalidad.

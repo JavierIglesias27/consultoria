@@ -108,9 +108,11 @@ Se utilizará Heroku parar tener un servidor de php donde se actualizará el có
 
 1. Ajuste de tiempo en HTML5 y CSS3, huboi que arreglar código y hubo que recortar de planteamiento inicial del proyecto.
 
-2.  Se ajustan los tiempos en el diagrama de Gant, debido a que la parte extra de Php y Base de Datos SQL requirienron mas tiempo de lo estimado
+2. Se ajustan los tiempos en el diagrama de Gant, debido a que la parte extra de Php y Base de Datos SQL requirienron mas tiempo de lo estimado
 
 3. Cambio en el formato final de los forms, se aclimatan unos forms que llaman más la atención y son más atraibles a la vista. Además se agregan enlaces para poder moverse entre registrarse, nuevo usuario e index.html.
 
 4. Los mail de cofirmación tanto de registrarse como de contacto, se cambia sus formato paras ser más fáciles y entendibles para el cliente y contengas más información extra.
 5. Los mails de registro y contacto se rellenan automaticamente al registrarte/ conatacto mediante los datos introducidos en el form y así el cliente puede guardar sus datos en caso de verificarlos.
+
+## Prueba GTMETRIX
