@@ -1,19 +1,3 @@
-# Explicación previa:
-
-La intención es realizar una página web de una consultoría que ses fácil y accesible para todos clientes.Y poder aplicar mis conocimientos de Administración de Empresas a y programación para que tenga una buena funcionalidad desde frontEnd y parte del BackEnd.
-
-## BRAINSTORM
-
-1. Web Asesoría-consultoría. "ELEGIDA"
-2. Red Social: Permite a los usuarios interactuar entre ellos en diferentes ámbitos. " NO ELEGIDA porque no me pareció oportuno"
-3. Encuestas: Preguntar sobre diferentes temas y poder evaluar sus resultados. Muy útil para departamentos de Marketing. " NO ELEGIDA aunque parezca de mi ámbito lo llevan empresas externas a asesorías"
-4. Biblioteca: Pagina que permita ordenar/ prestar libros a los usuarios. " NO ELEGIDA porque es un tema que no me interesa"
-5. Blog de noticias: Información relacionada con diferentes temas de actualidad. " NO ELEGIDA no me gustan los periódicos"
-6. Enciclopedia: Almacenar el conocimiento humano, organizado alfabéticamente y descrito de manera objetiva. " NO ELEGIDA porque no me gusta"
-7. Gestion de internos de vuelos:Organización interna de una compañía aerea p.e puerta embarque, billetes... " NO ELEGIDA por la complejidad del proyecto dentro mySQL"
-8. Recetario: Descripcion de diferentes recetas de cocina, ordenadas según las diferentes cocinas internacionales. " NO ELEGIDA porque no le veo utilidad a un recetario"
-9. Blog de opinion: Poder dar tu opinión sobre diferentes temas de actualidad. "NO ELEGIDA porque es un blog poco interensate"
-10. Mailing: Usuarios enviaran mails entre ellos. " NO ELEGIDA aunque sea bastante valioso dentro de la página no hay tiempo material para hacerlo"
 
 ## Nombre del proyecto: ASESORÍA CONSULTING S.A.
 
@@ -44,18 +28,24 @@ La intención es realizar una página web de una consultoría que ses fácil y a
    3. Fonts
    4. Jquery
 3. MySQL- MariaDB
-4. Heroku (Servidor php)
-5. Composer (Mantener actualizadas las librerias)
+4. Heroku 
+5. Composer 
 6. PHPMailer(Para hacer mailing)
 7. Recaptcha(verificación del registros de alta y login)
 
 ## Herramientas
 
 ```
- Utilización de  GitHUb para el control de versiones mediante repositorios, contratando el dominio de la página web Freenom y se usará la web `websur.tk`.
- Se usará una  una base de datos MariaDB con código SQL y se contratará a myfreehosting.net  para poder tener acceso remoto.
+Uso de Utilización de  GitHUb para el control de versiones mediante repositorios, y en este caso contratando el dominio de la página web Freenom, se usará la web `websur.tk`. Solo servirá como prueba de visualización Html-Css-Js.
 
-Se utilizará Heroku parar tener un servidor de php donde se actualizará el código mediante repositorio.
+Se utilizará heroku como servidor Php y mantener actualizado las versiones de GitHub, no he podido añadir websur.tk a heroku porque era de pago.
+
+Uso de composer para mantener actualizadas las librerías.
+
+Se usará una  una base de datos MariaDB con código SQL y se contratará a myfreehosting.net  para poder tener acceso remoto.Adjuntadose la DataBase a el archivo sql4501016.sql
+
+Uso de Recaptcha de google para la verificación del registros para nuevos clientes, para el inicio de sesión y para formulario de contacto si fuera necesario.
+
 ```
 
 ## Realizar un diagrama de Gantt
@@ -110,14 +100,19 @@ Se utilizará Heroku parar tener un servidor de php donde se actualizará el có
 
 ## Diferencias entre proyecto inicial y Final
 
-1. Ajuste de tiempo en HTML5 y CSS3, huboi que arreglar código y hubo que recortar de planteamiento inicial del proyecto.
+1. Ajuste de tiempo en HTML5 y CSS3, hubo que arreglar código y hubo que variar parte del planteamiento inicial del proyecto.
 
-2. Se ajustan los tiempos en el diagrama de Gant, debido a que la parte extra de Php y Base de Datos SQL requirienron mas tiempo de lo estimado
+2. Se ajustan los tiempos en el diagrama de Gant, debido a que la parte extra de Php y Base de Datos SQL requirieron mas tiempo de lo estimado.
 
-3. Cambio en el formato final de los forms, se aclimatan unos forms que llaman más la atención y son más atraibles a la vista. Además se agregan enlaces para poder moverse entre registrarse, nuevo usuario e index.html.
+3. Cambio en el formato final de los forms, se aclimatan unos forms que llaman más la atención y son más atraibles a la vista. Además se agregan enlaces para poder moverse entre ambos forms y poner regresar a la página inicio.
 
-4. Los mail de cofirmación tanto de registrarse como de contacto, se cambia sus formato paras ser más fáciles y entendibles para el cliente y contengas más información extra.
-5. Los mails de registro y contacto se rellenan automaticamente al registrarte/ conatacto mediante los datos introducidos en el form y así el cliente puede guardar sus datos en caso de verificarlos.
+4. Los mail de cofirmación tanto de registrarse como de contacto, se cambia sus formato para ser más fáciles y entendibles para el cliente y contienen más información extra.Además de redirigirte a la página inicial, Facebook, Instagram,y google. Y se añaden enlances terminos y condiciones.
+
+5. Los mails de registro y contacto se rellenan automaticamente al registrarte o contactar mediante los datos introducidos en el form y así el cliente puede guardar sus datos en caso de que querer verificarlos o cambiarlos.
+
+6. El formulario de registro durante su primer mail se queda en la DB de SQL usuarios_temp para poder enviar más de uno en caso de error y en el momento de rebibir el mail y clicar en link se elimina automaticamente del usuarios_temps todos los mails con identico usuario y pasa únicamente como registrado a la tabla usuario para poder acceder a su espacio personal y evitar así duplicidades de mails.
+
+7. El formulario de contacto en su primer mail esta en estado 0 y cambia al estado 1 en la Db de SQL al presionar en el link que se recibe en la cuenta de correo personal.
 
 ## Prueba Usabilidad
 

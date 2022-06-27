@@ -41,7 +41,7 @@ Es un proyecto que tiene una gran usabilidad, debido a la visualización y senci
 ## Construido con 🛠️
 
 1. Lenguajes de programación
-   *  Html5
+   * Html5
    * Css3
    * JavaScript   
    * Php
