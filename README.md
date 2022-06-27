@@ -19,7 +19,7 @@ Esta creada para ofrezcer servicios profesionales de gestión y asesoramiento le
    3. JavaScript
    4. Php
 2. Bibliotecas
-   1. Boostrap
+   1. Boostrap 3.5.0
    2. FontsAwesome
    3. Fonts
    4. Jquery

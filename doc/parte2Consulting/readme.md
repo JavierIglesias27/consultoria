@@ -56,23 +56,23 @@ Se utilizará Heroku parar tener un servidor de php donde se actualizará el có
 
 ## Realizar un diagrama de Gantt
 
-![wireframe ](./img/gantFinal.png)
+![diagrama de Gant ](./img/gantFinal.png)
 
 ## Wireframes
 
-![wireframe ](./img/indexHtml.png)
+![index.html ](./img/indexHtml.png)
 
-![wireframe ](./img/menuHtml.png)
+![menu.html ](./img/menuHtml.png)
 
-![wireframe ](./img/loginFinal.png)
+![formLogin.html ](./img/loginFinal.png)
 
-![wireframe ](./img/registrarseFinalHtml.png)
+![formRegistrarse.html ](./img/registrarseFinalHtml.png)
 
-![wireframe ](./img/contactaHtml.png)
+![formContacta ](./img/contactaHtml.png)
 
-![wireframe ](./img/mailContacta.png)
+![formMail ](./img/mailContacta.png)
 
-![wireframe ](./img/mailRegistra.png)
+![FormRegistro ](./img/mailRegistra.png)
 
 ## Path
 
@@ -115,4 +115,22 @@ Se utilizará Heroku parar tener un servidor de php donde se actualizará el có
 4. Los mail de cofirmación tanto de registrarse como de contacto, se cambia sus formato paras ser más fáciles y entendibles para el cliente y contengas más información extra.
 5. Los mails de registro y contacto se rellenan automaticamente al registrarte/ conatacto mediante los datos introducidos en el form y así el cliente puede guardar sus datos en caso de verificarlos.
 
-## Prueba GTMETRIX
+## Prueba Usabilidad
+
+`resultado obtenido mediante GTMETRIX`
+
+![page1 ](./img/page1.png)
+
+![page2 ](./img/page2.png)
+
+![page3 ](./img/page3.png)
+
+![page4 ](./img/page4.png)
+
+![page5 ](./img/page5.png)
+
+![page6 ](./img/page6.png)
+
+![page7 ](./img/page7.png)
+
+![page8 ](./img/page8.png)
