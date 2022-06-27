@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Nombre del Proyecto: Asesoría Consulting S.A
-=======
->>>>>>> a80a79b6942c2d791da61d11726be0e8981272f8
 
 ## Título del Proyecto
 
