@@ -88,7 +88,7 @@ function registrarUsuario() {
 			password: inputPassword_valor,
 			captcha: document.getElementById("g-recaptcha-response").value,
 		},
-		//dataType: "json",
+		dataType: "json",
 		success: function (response) {
 			if (response == 0) {
 				console.warn(response);

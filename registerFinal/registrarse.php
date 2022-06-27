@@ -166,7 +166,7 @@ function sendMail($usuario, $sha1, $myObject)
                   
                     <!-- Callout Panel -->
                     <p class="callout" >
-                       Regresa a la página principal <a href="http://index.html">Click aquí! &raquo;</a>
+                       Regresa a la página principal <a href="' .  $_SERVER['HTTP_HOST'] . '/index.html">Click aquí! &raquo;</a>
                     </p><!-- /Callout Panel -->					
                                             
                     <!-- social & contact -->

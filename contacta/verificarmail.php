@@ -37,7 +37,7 @@
                 $usuario->estado = $row['estado'];
                 $usuario->reg_date = $row['reg_date'];
             }
-            
+
 
             $xstring = $usuario->id . "-" . $usuario->email . "-" . $usuario->nombre . "-" . $usuario->apellido . "-" . $usuario->phone . "-" . $usuario->asunto . "-" . $usuario->textarea . "-" . $usuario->reg_date . '-0';
             $sha1 = sha1($xstring);
@@ -49,7 +49,7 @@
 
             echo '<br/>';
             if ($clave == $sha1) {
-               
+
                 // un avez hecho descomento insertuser
                 insertUser($usuario);
             } else {
@@ -101,25 +101,25 @@
                 <table>
                     <tr>
                         <td>
-                            <h3>Sr/a: <i><b>'."  ".$usuario->nombre." ".$usuario->apellido.'</b></i></h3>
+                            <h3>Sr/a: <i><b>' . "  " . $usuario->nombre . " " . $usuario->apellido . '</b></i></h3>
                             <p class="lead">Le confirmamos que su consulta a sido recibida
                             correctamente.<br/> Nuestros especialista darán una solución lo más
-                            rápidamente posible a su consulta poniendose en contacto con usted mediante: <br/><ul><li>correo:'."  ".'<b><i>'.$usuario->email.'</b></i></li><li>Telefono:'."  ".'<b><i>'.$usuario->phone.'</b></i></li></ul></p>
+                            rápidamente posible a su consulta poniendose en contacto con usted mediante: <br/><ul><li>correo:' . "  " . '<b><i>' . $usuario->email . '</b></i></li><li>Telefono:' . "  " . '<b><i>' . $usuario->phone . '</b></i></li></ul></p>
                             <p>Le adjuntamos los datos de su consulta:</p>
                             <div style="border:2px solid black;background-color:#ccccff;margin:auto;padding:10px; margin-bottom:20px;"> 
                                 <ul>
                                     <li>id=' . $usuario->id . '</li>
                                     <li>Nombre=' . $usuario->nombre . '</li>
                                     <li>Apellidos=' . $usuario->apellido . '</li>
-                                    <li>telefono=' . $usuario->phone .'</li>
+                                    <li>telefono=' . $usuario->phone . '</li>
                                     <li>Asunto: ' . $usuario->asunto . '</li>
                                     <li>Fecha:' . $usuario->reg_date . '</li>
-                                    <li>Texto: ' . $usuario->textarea .'</li>
+                                    <li>Texto: ' . $usuario->textarea . '</li>
                                 </ul>
                             </div>
                             <!-- Callout Panel -->
                             <p class="callout" >
-                               Regresa a la página principal <a href="/index.html">Click aquí! &raquo;</a>
+                               Regresa a la página principal<a href="' .  $_SERVER['HTTP_HOST'] . '/index.html">Click aquí! &raquo;</a>
                             </p><!-- /Callout Panel -->					
                                                     
                             <!-- social & contact -->
@@ -199,22 +199,22 @@
             </body>
         </html>';
 
-        //     echo '<div style="background-color: grey; border: 2px solid black">
-        //     <h1>Te damos la bienvenida a Consulting S.A</h1>
-        //     <p>
-        //         Sr/a' . "  " . '<i><b>' . $usuario->nombre . "  " .  $usuario->apellido . "  " . '</i></b>le confirmamos que su consulta a sido recibida
-        //         correctamente.<br /> Nuestros especialista darán una solución lo más
-        //         rápidamente posible poniendose en contacto con usted mediante su correo:' . "  " . '<i><b>' .
-        //         $usuario->email . '</i></b>  o su número de telefono:' . "  " . '<i><b>' . $usuario->phone . '
-        //     <i><b> </p>
-        //     <div style="background-color: white; width:50%;margin:auto; padding-left:5px; border: 2px solid black">
-        //     id=' . $usuario->id . '<br/> Asunto: ' . $usuario->asunto . '<br/> Fecha:' . $usuario->reg_date . '<br/>
-        //     Texto: ' . $usuario->textarea . '
-            
-        //     </div>
-        //     <p>En caso de que los datos sean erroneos pongasé en contacto mediante el correo: <a href="#">consultingAsesores@gmail.com</a></p>
-        //     <h3>Atentamente la dirección de Consuting S.A</h3>
-        // </div>';
+            //     echo '<div style="background-color: grey; border: 2px solid black">
+            //     <h1>Te damos la bienvenida a Consulting S.A</h1>
+            //     <p>
+            //         Sr/a' . "  " . '<i><b>' . $usuario->nombre . "  " .  $usuario->apellido . "  " . '</i></b>le confirmamos que su consulta a sido recibida
+            //         correctamente.<br /> Nuestros especialista darán una solución lo más
+            //         rápidamente posible poniendose en contacto con usted mediante su correo:' . "  " . '<i><b>' .
+            //         $usuario->email . '</i></b>  o su número de telefono:' . "  " . '<i><b>' . $usuario->phone . '
+            //     <i><b> </p>
+            //     <div style="background-color: white; width:50%;margin:auto; padding-left:5px; border: 2px solid black">
+            //     id=' . $usuario->id . '<br/> Asunto: ' . $usuario->asunto . '<br/> Fecha:' . $usuario->reg_date . '<br/>
+            //     Texto: ' . $usuario->textarea . '
+
+            //     </div>
+            //     <p>En caso de que los datos sean erroneos pongasé en contacto mediante el correo: <a href="#">consultingAsesores@gmail.com</a></p>
+            //     <h3>Atentamente la dirección de Consuting S.A</h3>
+            // </div>';
 
             // header('Location: login.html');
         } else {
