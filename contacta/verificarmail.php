@@ -117,10 +117,7 @@
                                     <li>Texto: ' . $usuario->textarea . '</li>
                                 </ul>
                             </div>
-                            <!-- Callout Panel -->
-                            <p class="callout" >
-                               Regresa a la página principal <a href="./index.html">Click aquí! &raquo;</a>
-                            </p><!-- /Callout Panel -->					
+                            <!-- Callout Panel -->				
                                                     
                             <!-- social & contact -->
                             <table class="social" width="100%">
