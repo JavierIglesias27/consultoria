@@ -52,8 +52,8 @@ Es un proyecto que tiene una gran usabilidad, debido a la visualización y senci
 
 2. Bibliotecas
 
-   - [Boostrap] (https://getbootstrap.com/)
-   - [FontsAwesome] (https://fontawesome.com/)
+   - [Boostrap](https://getbootstrap.com/)
+   - [FontsAwesome](https://fontawesome.com/)
    - [Fonts](https://fonts.google.com/)
    - [Jquery](https://fonts.google.com/)
    - [Ajax](https://developer.mozilla.org/es/docs/Web/Guide/AJAX)
