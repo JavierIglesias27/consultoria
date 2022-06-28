@@ -1,35 +1,33 @@
-## Título del Proyecto
-
-_**Asesoría Consulting S.A**_
-
-## Comenzando 🚀
-
-### Ejecutando las pruebas ⚙️
-
-Este proyecto tiene una demo ejecutable : http://consultingsa.herokuapp.com/
-
-### Pruebas visualización Html-Css-Js 🔩
-
-https://www.websur.tk/
-
-### Puede encontrar mas info 📖
-
-https://github.com/JavierIglesias27/consultoria
-
-### Link diferencias entre partes 📖
-
-[acceso parte1](https://github.com/JavierIglesias27/consultoria/tree/main/doc/parte1Consulting)
-
-[acceso parte2](https://github.com/JavierIglesias27/consultoria/tree/main/doc/parte2Consulting)
+## Asesoría Consulting S.A
 
 ### Descripción 📋
 
 Esta página web es fácil y accesible para todos clientes y con buena funcionalidad.
 Esta creada para ofrezcer servicios profesionales de gestión y asesoramiento legal en diferentes ámbitos como por ejemplo el área laboral, Fiscal, extranjería...
 
+## Comenzando 🚀
+
+### Demos ⚙️
+
+##### Demo ejecutable hecha en heroku con PHP : [consultingsa.herokuapp.com](http://consultingsa.herokuapp.com/)
+
+##### Demo visualización Html-Css-Js 🔩
+
+[websur.tk](https://www.websur.tk/)
+
+#### Repositorio en Github 📖
+
+[github](https://github.com/JavierIglesias27/consultoria)
+
+### Links acceso a la documentación 📖
+
+[acceso documentacion inicial](./doc/parte1Consulting/README.md)
+
+[acceso documentacion final](./doc/parte2Consulting/README.md)
+
 ### Puntos fuertes
 
-Es un proyecto que tiene una gran usabilidad, debido a la visualización y sencillez de la página web, hace que los clientes o futuros clientes puedan accder a sus espacios y consultas muy facilmente. Además los formularios viene con avisos de colores en rojo o verde según si los campos introducidos son correctos o erroneos.
+Es un proyecto que tiene una gran usabilidad, debido a la visualización y sencillez de la página web, hace que los clientes o futuros clientes puedan acceder a sus espacios y consultas muy facilmente. Además los formularios viene con avisos de colores en rojo o verde según si los campos introducidos son correctos o erroneos.
 
 ### Estructura 🔧
 
