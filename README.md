@@ -36,8 +36,8 @@ Es un proyecto que tiene una gran usabilidad, debido a la visualización y senci
 - [login.html](/registerFinal/login.html)Página nueva para usuarios registrado.
 - [registrarse.html](/registerFinal/registrarse.html) Página para darse de alta como nuevo usuario.
 - [contacta.html](/contacta/contacta.html) Formulario en la página principal para contacto.
-- `MailContacta.html` Mail de confirmación al contactar.
-- `MailRegistro.html` Mail de confirmación al registrarte.
+- `MailContacta.html` Mail de confirmación al contactar dentro del PHP de contacta.
+- `MailRegistro.html` Mail de confirmación al registrarte dentro del PHP de registro.
 
 ## Construido con 🛠️
 
