@@ -18,24 +18,34 @@
 
 1. Lenguajes utilizados para programar
 
-   1. Html5
-   2. Css3
-   3. JavaScript
-   4. Php
+   - Html5
+   - Css3
+   - JavaScript
+   - Php
 
 2. Bibliotecas
 
-   1. [Boostrap] (https://getbootstrap.com/)
-   2. [FontsAwesome] (https://fontawesome.com/)
-   3. [Fonts](https://fonts.google.com/)
-   4. [Jquery](https://fonts.google.com/)
-   5. [Ajax](https://developer.mozilla.org/es/docs/Web/Guide/AJAX)
-   6. [composer](https://getcomposer.org/)
+   - [Boostrap] (https://getbootstrap.com/)
+   - [FontsAwesome] (https://fontawesome.com/)
+   - [Fonts](https://fonts.google.com/)
+   - [Jquery](https://fonts.google.com/)
+   - [Ajax](https://developer.mozilla.org/es/docs/Web/Guide/AJAX)
+   - [composer](https://getcomposer.org/)
 
 3. [MySQL- MariaDB](https://www.freemysqlhosting.net/register/?action=register)
 4. [Recaptcha](https://www.google.com/recaptcha/about/)
 5. [Heroku](https://www.heroku.com/)
 6. PHPMailer
+
+## Estructura 🔧
+
+- [index.html](/index.html) Pagina Principal del proyecto
+- [menu.html](/menu.html)Menu asociado a la página principal
+- [login.html](/registerFinal/login.html)Página nueva para usuarios registrado.
+- [registrarse.html](/registerFinal/registrarse.html) Página para darse de alta como nuevo usuario.
+- [contacta.html](/contacta/contacta.html) Formulario en la página principal para contacto.
+- `MailContacta.html` Mail de confirmación al contactar.
+- `MailRegistro.html` Mail de confirmación al registrarte.
 
 ## Herramientas
 

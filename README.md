@@ -31,11 +31,11 @@ Es un proyecto que tiene una gran usabilidad, debido a la visualización y senci
 
 ### Estructura 🔧
 
-- `index.html` Pagina Principal del proyecto
-- `menu.html`Menu asociado a la página principal
-- `login.html`Página nueva para usuarios registrado.
-- `registrarse.html` Página para darse de alta como nuevo usuario.
-- `contacta.html` Formulario en la página principal para contacto.
+- [index.html](/index.html) Pagina Principal del proyecto
+- [menu.html](/menu.html)Menu asociado a la página principal
+- [login.html](/registerFinal/login.html)Página nueva para usuarios registrado.
+- [registrarse.html](/registerFinal/registrarse.html) Página para darse de alta como nuevo usuario.
+- [contacta.html](/contacta/contacta.html) Formulario en la página principal para contacto.
 - `MailContacta.html` Mail de confirmación al contactar.
 - `MailRegistro.html` Mail de confirmación al registrarte.
 
