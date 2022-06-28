@@ -49,7 +49,7 @@ Es un proyecto que tiene una gran usabilidad, debido a la visualización y senci
    - JavaScript
    - Php
 2. Bibliotecas
-   - Boostrap
+   - Boostrap ()
    - FontsAwesome
    - Fonts
    - Jquery

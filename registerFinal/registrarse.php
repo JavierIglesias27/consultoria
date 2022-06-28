@@ -110,10 +110,10 @@ function sendMail($usuario, $sha1, $myObject)
 {
     //MAIL
     $HostSMTP = 'smtp.gmail.com';
-    $ContrasenaDelCorreo = 'glmhqdsxiibzpqak';
-    $SendFromEMAIL = 'javiCesi75@gmail.com';
+    $ContrasenaDelCorreo = 'fwwgxcjmunebldby';
+    $SendFromEMAIL = 'javicesi77@gmail.com';
     $QuienLoEnviaNAME = 'moderator';
-    $SendFromEMAILreply = 'javiCesi75@gmail.com';
+    $SendFromEMAILreply = 'javicesi77@gmail.com';
     $QuienResponderNAME = 'moderator';
     //$PortSMTP = 465; // con consulting.localhost este en cao de q falle
     $PortSMTP = 587; // freeemyhosting: este puerto y tmb xa consultoria.localhost
