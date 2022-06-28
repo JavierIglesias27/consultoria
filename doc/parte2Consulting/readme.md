@@ -1,4 +1,3 @@
-
 ## Nombre del proyecto: ASESORÍA CONSULTING S.A.
 
 ## Descripción del proyecto:
@@ -28,25 +27,22 @@
    3. Fonts
    4. Jquery
 3. MySQL- MariaDB
-4. Heroku 
-5. Composer 
+4. Heroku
+5. Composer
 6. PHPMailer
 7. Recaptcha
 
 ## Herramientas
 
-```
-Uso de Utilización de  GitHUb para el control de versiones mediante repositorios, y en este caso contratando el dominio de la página web Freenom, se usará la web `websur.tk`. Solo servirá como prueba de visualización Html-Css-Js.
+Uso de Utilización de GitHUb para el control de versiones mediante repositorios, y en este caso contratando el dominio de la página web Freenom, se usará la web `websur.tk`. Solo servirá como prueba de visualización Html-Css-Js.
 
 Se utilizará heroku como servidor Php y mantener actualizado las versiones de GitHub, no he podido añadir websur.tk a heroku porque era de pago.
 
-Uso de composer para mantener actualizadas las librerías.
+Uso de [composer](https://getcomposer.org/) para mantener actualizadas las librerías
 
-Se usará una  una base de datos MariaDB con código SQL y se contratará a myfreehosting.net  para poder tener acceso remoto.Adjuntadose la DataBase a el archivo sql4501016.sql
+Se usará una una base de datos MariaDB con código SQL y se contratará a myfreehosting.net para poder tener acceso remoto.Adjuntadose la DataBase a el archivo sql4501016.sql
 
 Uso de Recaptcha de google para la verificación del registros para nuevos clientes, para el inicio de sesión y para formulario de contacto si fuera necesario.
-
-```
 
 ## Realizar un diagrama de Gantt
 
