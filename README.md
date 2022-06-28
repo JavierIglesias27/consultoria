@@ -44,21 +44,25 @@ Es un proyecto que tiene una gran usabilidad, debido a la visualización y senci
 ## Construido con 🛠️
 
 1. Lenguajes de programación
+
    - Html5
    - Css3
    - JavaScript
    - Php
+
 2. Bibliotecas
-   - Boostrap ()
-   - FontsAwesome
-   - Fonts
-   - Jquery
-   - Ajax
-   - composer
-3. MySQL- MariaDB
-4. Recaptcha
+
+   - [Boostrap] (https://getbootstrap.com/)
+   - [FontsAwesome] (https://fontawesome.com/)
+   - [Fonts](https://fonts.google.com/)
+   - [Jquery](https://fonts.google.com/)
+   - [Ajax](https://developer.mozilla.org/es/docs/Web/Guide/AJAX)
+   - [composer](https://getcomposer.org/)
+
+3. [MySQL- MariaDB](https://www.freemysqlhosting.net/register/?action=register)
+4. [Recaptcha](https://www.google.com/recaptcha/about/)
 5. PHPMailer
-6. Heroku
+6. [Heroku](https://www.heroku.com/)
 
 ## Autor ✒️
 

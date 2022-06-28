@@ -17,20 +17,25 @@
 ## Lenguajes, codigos, bibliotecas y frameworks serán usados:
 
 1. Lenguajes utilizados para programar
+
    1. Html5
    2. Css3
    3. JavaScript
    4. Php
+
 2. Bibliotecas
-   1. Boostrap
-   2. FontsAwesome
-   3. Fonts
-   4. Jquery
-3. MySQL- MariaDB
-4. Heroku
-5. Composer
+
+   1. [Boostrap] (https://getbootstrap.com/)
+   2. [FontsAwesome] (https://fontawesome.com/)
+   3. [Fonts](https://fonts.google.com/)
+   4. [Jquery](https://fonts.google.com/)
+   5. [Ajax](https://developer.mozilla.org/es/docs/Web/Guide/AJAX)
+   6. [composer](https://getcomposer.org/)
+
+3. [MySQL- MariaDB](https://www.freemysqlhosting.net/register/?action=register)
+4. [Recaptcha](https://www.google.com/recaptcha/about/)
+5. [Heroku](https://www.heroku.com/)
 6. PHPMailer
-7. Recaptcha
 
 ## Herramientas
 
