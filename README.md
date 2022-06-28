@@ -21,9 +21,9 @@ Esta creada para ofrezcer servicios profesionales de gestión y asesoramiento le
 
 ### Links acceso a la documentación 📖
 
-[acceso documentacion inicial](./doc/parte1Consulting/README.md)
+[acceso documentacion inicial](./doc/parte1Consulting/readme.md)
 
-[acceso documentacion final](./doc/parte2Consulting/README.md)
+[acceso documentacion final](./doc/parte2Consulting/readme.md)
 
 ### Puntos fuertes
 
