@@ -21,7 +21,7 @@ La intención es realizar una página web de una consultoría que sesa fácil y 
 
 ## Descripción del proyecto:
 
-`Crear una página web para una asesoría donde se ofrezcan servicios profesionales de gestión y asesoramiento legal en diferentes ámbitos como por ejemplo el área laboral, Fiscal, extranjería...`
+`Crear una página web para una asesoría donde se ofrezcan servicios profesionales de gestión y asesoramiento legal en diferentes ámbitos como por ejemplo el área laboral, Fiscal, extranjería, seguros...`
 
 ## Mercado:
 
